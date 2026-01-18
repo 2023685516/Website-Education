@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Serumpun Rasa</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>    
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fffaf5;
+        }
+
+        header {
+            background: #ffffff;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo h1 { font-family: 'Playfair Display', serif; font-size: 28px; color: #2c3e50; }
+        .logo h1 span { color: #d35400; }
+
+        nav ul {
+
+            display: flex;
+            list-style:none;
+            align-items: center;
+            flex-wrap: nowrap; 
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            color: #d35400;
+        }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #ffffff;
+        min-width: 180px;
+        box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+        z-index: 1001;
+        border-radius: 8px;
+        top: 100%;
+        left: 0;
+        padding: 10px 0;
+        text-align: left; 
+    }
+
+    .dropdown-content a {
+        color: #555 !important; 
+        padding: 10px 20px;
+        text-decoration: none;
+        display: block;
+        font-size: 13px;
+        text-transform: capitalize;
+        transition: 0.2s;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #fffaf5;
+        color: #d35400 !important;
+        padding-left: 25px;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown > a::after {
+        content: ' ▾';
+        font-size: 10px;
+        vertical-align: middle;
+    }
+
+    @media (max-width: 768px) {
+        .dropdown-content {
+            position: static;
+            box-shadow: none;
+            background: #f9f9f9;
+            width: 100%;
+        }
+}
+
+.contact-btn {
+    background-color: #d35400; 
+    color: white !important;   
+    padding: 6px 15px;       
+    border-radius: 50px;       
+    transition: 0.3s;
+    display: inline-block;
+    border: 2px solid #d35400;
+}
+
+.contact-btn:hover {
+    background-color: transparent; 
+    color: #d35400 !important;    
+    transform: translateY(-2px);   
+}
+
+@media (max-width: 768px) {
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact-btn-container {
+        margin-left: 0; 
+        margin-top: 10px;
+    }
+}
+
+    .page-header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://pbs.twimg.com/media/EefP5UiUYAInbTt.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 5%;
+            border-bottom-left-radius: 80px;
+            border-bottom-right-radius: 80px;
+            margin-left:10px;
+        }
+
+        .page-header h2 { font-family: 'Playfair Display', serif; font-size: 45px; }
+        .container { max-width: 1100px; margin: -50px auto 50px; padding: 0 20px; }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+
+        .contact-form h3 { font-family: 'Playfair Display', serif; margin-bottom: 20px; color: #d35400; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 5px; }
+      
+  input, textarea {
+           width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: inherit;
+            background: #f9f9f9;
+        }
+
+        input:focus, textarea:focus { outline: 1px solid #d35400; background: #fff; }
+
+        .submit-btn {
+            background: #d35400;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+            width: 100%;
+        }
+
+        .submit-btn:hover { background: #e67e22; transform: translateY(-2px); }
+
+
+        .reviews-section { padding: 80px 5%; text-align: center; }
+        .section-title { font-family: 'Playfair Display', serif; font-size: 36px; margin-bottom: 40px; position: relative; display: inline-block; }
+        .section-title::after { content: ''; width: 60px; height: 3px; background: #d35400; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); }
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .review-card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: left;
+            border-top: 5px solid #d35400;
+        }
+
+        .stars { color: #f1c40f; margin-bottom: 10px; }
+        .review-text { font-style: italic; color: #555; margin-bottom: 15px; }
+        .reviewer-info { display: flex; align-items: center; gap: 15px; }
+        .reviewer-img { width: 50px; height: 50px; border-radius: 50%; background: #eee; }
+        .reviewer-name h4 { font-size: 16px; color: #2c3e50; }
+        .reviewer-name p { font-size: 12px; color: #999; }
+
+        footer { background:#2c3e50; color: white; padding: 15px 0; text-align: center; margin-top: 50px; }
+
+        @media (max-width: 768px) {
+            .contact-wrapper { grid-template-columns: 1fr; }
+            .page-header h2 { font-size: 32px; }
+        }
+    </style>
+
+</head>
+<body>
+<header>
+
+    <div class="logo">
+        <h1>Serumpun<span>Rasa</span></h1>
+    </div>
+
+   <nav>
+        <ul>
+            <li><a href="#">Home</a></li>            
+
+            <li class="dropdown">
+                <a href="#">Selatan</a>
+                <div class="dropdown-content">
+                    <a href="#">Johor</a>
+                    <a href="#">Selangor</a>
+                    <a href="#">Negeri Sembilan</a>
+                    <a href="#">Melaka</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">Utara</a>
+                <div class="dropdown-content">
+                    <a href="#">Kedah</a>
+                    <a href="#">Pulau Pinang</a>
+                    <a href="#">Perak</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">Pantai Timur</a>
+                <div class="dropdown-content">
+                    <a href="#">Kelantan</a>
+                    <a href="#">Terengganu</a>
+                    <a href="#">Pahang</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="#">Borneo</a>
+                <div class="dropdown-content">
+                    <a href="#">Sabah</a>
+                    <a href="#">Sarawak</a>
+                </div>
+            </li>
+
+            <li class="contact-btn-container">
+                <a href="#" class="contact-btn" class="active">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="page-header">
+    <div data-aos="fade-down">
+        <h2>Contact Us</h2>
+        <p>Have questions about a recipe? Or want to share your cooking results?</p>
+    </div>
+</section>
+
+<div class="container">
+    <div class="contact-wrapper" data-aos="fade-up">
+        <div class="contact-form">
+            <h3>Send Message</h3>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" id="name" placeholder="Enter your name..." required>
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="email" placeholder="Example@gmail.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Subject</label>
+                    <input type="text" id="subject" placeholder="Recipe Inquiry / Suggestions">
+                </div>
+
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea id="message" rows="5" placeholder="Write your message here..." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Now!</button>
+            </form>
+        </div>
+
+<div class="contact-info" style="display: flex; flex-direction: column; justify-content: center; background: #fffaf5; padding: 30px; border-radius: 20px;">
+            <h3 style="font-family: 'Playfair Display', serif; margin-bottom: 15px;">🍳 Our Kitchen</h3>
+            <p>We are always ready to help you bring traditional flavors to your own home kitchen.</p>
+            <br>
+            <p><strong>🕒 Working Hours:</strong><br>Monday – Friday (9:00 AM - 5:00 PM)</p>
+            <br>
+            <p><strong>📧 Direct Emails:</strong><br>serumpunRasa@gmail.com</p>
+            <div style="margin-top: 20px; font-size: 24px;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="reviews-section">
+    <h2 class="section-title" data-aos="fade-up">Customer Reviews</h2>
+    <p style="margin-bottom: 30px;">Thousands of people have tried our heritage recipes. Here are some of their feedback.</p>
+
+    <div class="review-grid">
+        <div class="review-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"The Laksa Johor recipe here is exactly like how my late grandmother used to make it. The gravy is rich, and the spaghetti-making technique truly follows tradition!"</p>
+            <div class="reviewer-info">
+                <img src="https://globalinclusivegrowthsummit.com/wp-content/uploads/2025/10/Headshot-Dato-Sri-Siti-Nurhaliza-768x768.jpg" alt="User" class="reviewer-img">
+                <div class="reviewer-name">
+                    <h4>Siti Nurhaliza</h4>
+                    <p>Laksa Johor</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="review-card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"Very easy to follow! I’ve always been afraid to cook Nasi Kerabu because it looked complicated, but Serumpun Rasa’s step-by-step guide made it so simple."</p>
+            <div class="reviewer-info">
+                <img src="https://clips.mstar.com.my/images/blob/2061F7C8-750E-4CA4-8F13-71D9C83B9A14" alt="User" class="reviewer-img">
+                <div class="reviewer-name">
+                    <h4>Aida Jebat</h4>
+                    <p>Nasi Kerabu</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="review-card" data-aos="zoom-in" data-aos-delay="300">
+            <div class="stars">★★★★☆</div>
+            <p class="review-text">"The Ambuyat recipe is authentic and delicious! The texture is perfectly sticky, and the dipping sauces bring out the traditional flavors just like in Sabah. Very easy to follow and satisfying to eat!s"</p>
+            <div class="reviewer-info">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_MpPsbKrUKaFlX0SrVcIsVMGmDROmCczoLw&s" alt="User" class="reviewer-img">
+                <div class="reviewer-name">
+                    <h4>Daus Batjo</h4>
+                    <p>Ambuyat</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="review-card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="stars">★★★★☆</div>
+            <p class="review-text">"The Nasi Manis recipe is simply delightful! The rice is sweet, fragrant, and fluffy—just like homemade. The steps are easy to follow, and the result tastes truly traditional. A definite favorite for family meals!"</p>
+            <div class="reviewer-info">
+                <img src="https://cdn.kbizoom.com/media/2025/08/25034351/cortis-martin-height-thumbnail-20250825t032755000z.webp" alt="User" class="reviewer-img">
+                <div class="reviewer-name">
+                    <h4>Martin CORTIS</h4>
+                    <p>Nasi Manis</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="review-card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"The Kacang Pool recipe is amazing! The beans are perfectly cooked, and the flavorful sauce tastes just like the ones from the local stalls. Easy to follow, and it really brings out the authentic taste. Highly recommended!"</p>
+            <div class="reviewer-info">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgk2SdNl3gg0Z46SwBr4C3CPxZvLZKd5oCjw&s" alt="User" class="reviewer-img">
+                <div class="reviewer-name">
+                    <h4>Shinyu TWS</h4>
+                    <p>Kacang Pool</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="review-card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="stars">★★★☆☆</div>
+            <p class="review-text">"I never thought I could make Puding Diraja at home, but this recipe proved me wrong. The steps are simple, and the result tastes truly royal."</p>
+            <div class="reviewer-info">
+                <img src="https://i.pinimg.com/736x/41/76/8c/41768c3c05ff7166d16d3369dd387950.jpg" alt="User" class="reviewer-img">
+                <div class="reviewer-name">
+                    <h4>Megan</h4>
+                    <p>Puding Diraja</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="review-card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="stars">★★★☆☆</div>
+            <p class="review-text">"The Kacang Pool recipe is amazing! The beans are perfectly cooked, and the flavorful sauce tastes just like the ones from the local stalls. Easy to follow, and it really brings out the authentic taste. Highly recommended!"</p>
+            <div class="reviewer-info">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMx-UITcLvepdDdZPR4YT7ATL-ort1Dg2Uqw&s" alt="User" class="reviewer-img">
+                <div class="reviewer-name">
+                    <h4>Oohami</h4>
+                    <p>Tauhu bakar</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="review-card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="stars">★★★★☆</div>
+            <p class="review-text">"I love how straightforward this Mee Kolok recipe is. Despite its simplicity, the flavors are rich and well-rounded. The step-by-step guide makes cooking easy, and the final dish turns out delicious!"</p>
+            <div class="reviewer-info">
+                <img src="https://i.pinimg.com/236x/15/f2/2e/15f22e3ce398faefc33ab609b8d6dca7.jpg" alt="User" class="reviewer-img">
+                <div class="reviewer-name">
+                    <h4>Pokro</h4>
+                    <p>Mee Kolok</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="review-card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"I’ve tried many Laksa Sarawak recipes, but this one stands out. The flavors are authentic, the texture is perfect, and the instructions are detailed without being complicated. A comforting and satisfying dish that feels truly traditional."</p>
+            <div class="reviewer-info">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKMCLF0mC975dAUmNy0_fvWrlJjyUjTreORQ&s" alt="User" class="reviewer-img">
+                <div class="reviewer-name">
+                    <h4>Jongho ATEEZ</h4>
+                    <p>Laksa Sarawak</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="review-card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="stars">★★★☆☆</div>
+            <p class="review-text">"I’ve always admired Kek Lapis Sarawak but never dared to make it myself. This recipe explains every step clearly, from layering to baking, and the result is stunning and delicious. The texture is soft, and the taste feels truly authentic."</p>
+            <div class="reviewer-info">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlDmjUEN509OKjLWZsOHamC9_hVr-O-yn_mg&s" alt="User" class="reviewer-img">
+                <div class="reviewer-name">
+                    <h4>Asa BABYMONSTER</h4>
+                    <p>Kek Lapis Sarawak</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="review-card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="stars">★★★☆☆</div>
+            <p class="review-text">"I was a bit hesitant to cook Tempoyak at first, but this recipe makes it simple and enjoyable. The method is clear, the ingredients are well explained, and the final result is perfectly balanced and delicious."</p>
+            <div class="reviewer-info">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqzVaJR8YRpGjQxZRes0rApqUrUL8vsn61ug&s" alt="User" class="reviewer-img">
+                <div class="reviewer-name">
+                    <h4>Wonyoung IVE</h4>
+                    <p>Tempoyak</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="review-card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"This Satar Ikan tastes exactly like the ones from the East Coast. The fish filling is soft, fragrant, and perfectly seasoned. The instructions are detailed yet simple, so even first-timers can achieve great results."</p>
+            <div class="reviewer-info">
+                <img src="https://liquipedia.net/commons/images/c/c6/SRGOG_Stormie_S16.png" alt="User" class="reviewer-img">
+                <div class="reviewer-name">
+                    <h4>Stormie</h4>
+                    <p>Satar Ikan</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Serumpun Rasa. All right reserved. | Last updated: 18 January 2026</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 1000, once: true });
+    const contactForm = document.getElementById('contactForm');
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault(); // Menghalang refresh halaman
+        const userName = document.getElementById('name').value;
+
+        Swal.fire({
+            title: 'Message Sent Successfully!',
+            text: `Thank you ${userName}. Your message has been received and will be responded to as soon as possible.`,
+            icon: 'success',
+            confirmButtonColor: '#d35400',
+            confirmButtonText: 'Close',
+            background: '#fffaf5',
+            backdrop: `rgba(211, 84, 0, 0.15)`
+        });
+
+        contactForm.reset();
+    });
+</script>
+
+</body>
+</html>
