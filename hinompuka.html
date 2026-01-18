@@ -26,7 +26,6 @@
             line-height: 1.7;
         }
 
-        /* Navigation */
         header {
             background: white;
             padding: 15px 8%;
@@ -42,7 +41,6 @@
         .logo h1 { font-family: 'Playfair Display', serif; font-size: 24px; color: var(--secondary-color); }
         .logo span { color: var(--primary-color); }
 
-        /* Header Recipe */
         .recipe-header {
             padding: 40px 8%;
             background: white;
@@ -79,7 +77,6 @@
         .stat-item i { color: var(--primary-color); display: block; margin-bottom: 5px; }
         .stat-item span { font-size: 12px; font-weight: 600; text-transform: uppercase; }
 
-        /* Main Content */
         .recipe-container {
             padding: 50px 8%;
             display: grid;
@@ -87,7 +84,6 @@
             gap: 50px;
         }
 
-        /* Ingredients */
         .ingredients-card {
             background: #fff;
             padding: 30px;
@@ -108,7 +104,6 @@
 
         .ingredient-item input { margin-right: 12px; accent-color: var(--primary-color); width: 18px; height: 18px; }
 
-        /* Video Box */
         .video-box {
             width: 100%;
             height: 350px;
@@ -145,7 +140,6 @@
             transform: translate(-50%, -50%) scale(1.1);
         }
 
-        /* Steps */
         .steps-container h3 { margin-bottom: 30px; font-size: 28px; font-family: 'Playfair Display', serif; }
 
         .step-card {
@@ -177,7 +171,6 @@
             flex-shrink: 0;
         }
 
-        /* Buttons & Footer */
         button#printBtn {
             background: var(--primary-color); 
             color: white; 
@@ -197,7 +190,6 @@
 
         footer { background:#2c3e50; color: white; padding: 15px 0; text-align: center; margin-top: 40px; }
 
-        /* Responsive */
         @media (max-width: 992px) {
             .recipe-header, .recipe-container { grid-template-columns: 1fr; }
             .recipe-image-big { height: 300px; }
@@ -303,23 +295,20 @@
 </footer>
 
 <script>
-    // Fungsi Butang Cetak
+
     document.getElementById('printBtn').addEventListener('click', function() {
         window.print();
     });
 
-    // Fungsi Video Main di situ
     const videoBox = document.getElementById('videoBox');
     const video = document.getElementById('ambuyatVideo');
     const playBtn = videoBox.querySelector('.play-btn');
     const poster = videoBox.querySelector('img');
 
     videoBox.addEventListener('click', () => {
-        // Sembunyi poster dan play button
         poster.style.display = 'none';
         playBtn.style.display = 'none';
 
-        // Tunjuk video dan main
         video.style.display = 'block';
         video.play();
     });
@@ -327,3 +316,4 @@
 
 </body>
 </html>
+
