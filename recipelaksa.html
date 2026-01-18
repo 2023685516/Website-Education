@@ -148,9 +148,12 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
+            transition: 0.3s;
         }
 
-        footer { background:#2c3e50; color: white; padding: 15px 0; text-align: center; margin-top: 40px; }
+        button#printBtn:hover { background: #c55a45; }
+
+        footer { background:#2c3e50; color: white; padding: 20px 0; text-align: center; margin-top: 40px; }
 
         @media (max-width: 992px) {
             .recipe-header, .recipe-container { grid-template-columns: 1fr; }
@@ -176,7 +179,7 @@
         <div class="stats-bar">
             <div class="stat-item"><i class="fas fa-clock"></i><span>45 Minutes</span></div>
             <div class="stat-item"><i class="fas fa-signal"></i><span>Intermediate</span></div>
-            <div class="stat-item"><i class="fas fa-users"></i><span>5 Servings</span></div>
+            <div class="stat-item"><i class="fas fa-user-friends"></i><span>5 Servings</span></div>
         </div>
 
         <button id="printBtn" onclick="window.print()">
@@ -188,7 +191,7 @@
 <div class="recipe-container">
     <aside class="ingredients-side">
         <div class="ingredients-card">
-            <h3>Ingredients</h3>
+            <h3>BAHAN-BAHAN</h3>
             <div class="ingredient-item"><input type="checkbox"><span>500g Spaghetti (boiled)</span></div>
             <div class="ingredient-item"><input type="checkbox"><span>1kg Ikan Parang / Kembung</span></div>
             <div class="ingredient-item"><input type="checkbox"><span>200ml Santan Pekat</span></div>
@@ -235,7 +238,7 @@
             </div>
             <div class="step-card">
                 <div class="step-number">4</div>
-                <div class="step-text"><strong>Season:</strong> Add toasted coconut (kerisik), torch ginger flower, and laksa leaves. Cook until the sauce thickens, then season with salt and a little sugar. Ready to serve!</div>
+                <div class="step-text"><strong>Season:</strong> Add toasted coconut (kerisik), torch ginger flower, and laksa leaves. Cook until the sauce thickens, then season with salt and a little sugar.</div>
             </div>
         </div>
     </main>
