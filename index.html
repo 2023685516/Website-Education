@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Serumpun Rasa</title>
-    
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
@@ -337,7 +337,6 @@
                 <a href="#">Selatan</a>
                 <div class="dropdown-content">
                     <a href="selatanjohor.html">Johor</a>
-                    <a href="selatanselangor.html">Selangor</a>
                     <a href="selatannegeri.html">Negeri Sembilan</a>
                     <a href="selatanmelaka.html">Melaka</a>
                 </div>
@@ -355,9 +354,9 @@
             <li class="dropdown">
                 <a href="#">Pantai Timur</a>
                 <div class="dropdown-content">
-                    <a href="#">Kelantan</a>
-                    <a href="#">Terengganu</a>
-                    <a href="#">Pahang</a>
+                    <a href="kelantan.html">Kelantan</a>
+                    <a href="terengganu.html">Terengganu</a>
+                    <a href="pahang.html">Pahang</a>
                 </div>
             </li>
 
@@ -466,10 +465,10 @@
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-    // 1. Initialize AOS
+ 
     AOS.init({ duration: 1000, once: true });
 
-    // 2. Counter Logic yang diperhalusi
+ 
     const counters = document.querySelectorAll('.counter');
     
     const startCounter = (el) => {
@@ -490,7 +489,6 @@
         update();
     };
 
-    // 3. Observer untuk trigger animasi bila skrol
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -505,4 +503,5 @@
 </script>
 
 </body>
+
 </html>
