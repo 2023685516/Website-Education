@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warisan Pahang | Serumpun Rasa</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #d35400;
+            --secondary-color: #2c3e50;
+            --bg-light: #fffaf5;
+            --text-muted: #7f8c8d;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-light);
+        }
+
+        header {
+            background: #ffffff;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo h1 { font-family: 'Playfair Display', serif; font-size: 28px; color: #2c3e50; }
+        .logo h1 span { color: #d35400; }
+        nav ul { 
+    list-style: none; 
+    display: flex; 
+    align-items: center;
+}
+        nav ul li { margin-left: 25px; }
+        nav ul li a { text-decoration: none; color: #555; font-weight: 600; font-size: 14px; text-transform: uppercase; transition: 0.3s; }
+        nav ul li a:hover, nav ul li a.active { color: #d35400; }
+
+        .dropdown { position: relative; display: inline-block; }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            min-width: 180px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+            z-index: 1001;
+            border-radius: 8px;
+            top: 100%;
+            left: 0;
+            padding: 10px 0;
+            text-align: left;
+        }
+        .dropdown-content a {
+            color: #555 !important;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: block;
+            font-size: 13px;
+            text-transform: capitalize;
+            transition: 0.2s;
+        }
+        .dropdown-content a:hover { background-color: #fffaf5; color: #d35400 !important; }
+        .dropdown:hover .dropdown-content { display: block; }
+        .dropdown > a::after { content: ' ▾'; font-size: 10px; vertical-align: middle; }
+
+
+        .state-banner {
+            height: 400px;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://youimg1.tripcdn.com/target/0106m120008679yh1F546_D_1180_558.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .state-banner h2 { font-family: 'Playfair Display', serif; font-size: 50px; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+        .breadcrumb { font-size: 16px; opacity: 0.9; margin-top: 10px; letter-spacing: 1px; }
+
+        .search-container { padding: 30px 8%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+        .search-box { background: white; padding: 10px 20px; border-radius: 50px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); display: flex; align-items: center; width: 100%; max-width: 400px; }
+        .search-box input { border: none; outline: none; padding-left: 10px; width: 100%; }
+
+        .recipe-grid { padding: 0 8% 80px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .recipe-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.05); transition: 0.3s; }
+        .recipe-card:hover { transform: translateY(-5px); }
+        .recipe-img { height: 220px; background-size: cover; background-position: center; position: relative; }
+        .time-tag { position: absolute; bottom: 15px; right: 15px; background: rgba(255,255,255,0.9); padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; color: var(--primary-color); }
+        .recipe-content { padding: 20px; }
+        .recipe-content h3 { margin-bottom: 8px; color: var(--secondary-color); font-family: 'Playfair Display', serif; }
+        .recipe-info { display: flex; gap: 15px; font-size: 13px; color: var(--text-muted); margin-bottom: 20px; }
+        .btn-view { display: block; text-align: center; background: var(--secondary-color); color: white; padding: 10px; text-decoration: none; border-radius: 8px; font-weight: 600; transition: 0.3s; }
+        .btn-view:hover { background: var(--primary-color); }
+
+.contact-btn {
+    background-color: #d35400;
+    color: white !important; 
+    padding: 6px 15px;   
+    border-radius: 50px;   
+    transition: 0.3s;
+    display: inline-block;
+    border: 2px solid #d35400; 
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-btn:hover {
+    background-color: transparent; 
+    color: #d35400 !important;    
+    transform: translateY(-2px);   
+}
+
+.contact-btn-container {
+    margin-left: 20px;
+}
+
+        footer { background: var(--secondary-color); color: white; padding: 20px 0; text-align: center; }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <h1>Serumpun<span>Rasa</span></h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Utara</a>
+                <div class="dropdown-content">
+                    <a href="kedah.html">Kedah</a>
+                    <a href="penang.html">Pulau Pinang</a>
+                    <a href="perak.html">Perak</a>
+                    <a href="perlis.html">Perlis</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Selatan</a>
+                <div class="dropdown-content">
+                    <a href="johor.html">Johor</a>
+                    <a href="#">Selangor</a>
+                    <a href="#">Negeri Sembilan</a>
+                    <a href="#">Melaka</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="active">Pantai Timur</a>
+                <div class="dropdown-content">
+                    <a href="kelantan.html">Kelantan</a>
+                    <a href="terengganu.html">Terengganu</a>
+                    <a href="pahang.html" class="active">Pahang</a>
+                </div>
+            </li>
+            <li><a href="#">Borneo</a></li>
+
+        <li class="contact-btn-container">
+            <a href="#" class="contact-btn">Contact</a>
+        </li>
+
+        </ul>
+    </nav>
+</header>
+
+<div class="state-banner">
+    <h2>Pahang Darul Makmur</h2>
+    <div class="breadcrumb">Pantai Timur • Khazanah Masakan Sungai</div>
+</div>
+
+<div class="search-container">
+    <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" id="searchInput" placeholder="Search Pahang Recipe..." onkeyup="searchRecipe()">
+    </div>
+</div>
+
+<main class="recipe-grid" id="recipeGrid">
+    <div id="noResult" style="display: none; grid-column: 1 / -1; text-align: center; padding: 60px 20px;">
+        <i class="fas fa-utensils" style="font-size: 50px; color: #ddd; margin-bottom: 15px;"></i>
+        <p style="color: #7f8c8d; font-size: 18px;">Oops! Recipe not found.</p>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://myweekendplan.asia/wp-content/uploads/2022/01/Gulai-Tempoyak-Ikan-Patin-2.jpg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 45 Mins</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Gulai Patin Tempoyak</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-fish"></i> River Fish</span>
+                <span><i class="fas fa-star"></i> Temerloh</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Pahang's most iconic dish featuring fresh silver catfish cooked in a rich, spicy fermented durian gravy.</p>
+            <a href="patin.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://4.bp.blogspot.com/-bEWuPTAlyVE/V0-NZsgrYlI/AAAAAAAAVVc/IZWtRVBmJqUzmbDXoLCHO33qLun83ci8QCLcB/s1600/sambal-hitam-pahang.jpg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 4 Hours</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Sambal Hitam</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-pepper-hot"></i> Spicy</span>
+                <span><i class="fas fa-seedling"></i> Averrhoa Bilimbi</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">A unique dark sambal slow-cooked for hours until black, using sun-dried bilimbi for a tangy kick.</p>
+            <a href="sambalhitam.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://2.bp.blogspot.com/-qg92wRjbdPI/WAxg5fUzH4I/AAAAAAAALMM/axIYkl-T76Iwuw2axPmK0_zsUcuB3aZOQCLcB/s1600/IMG-20161023-WA0028.jpg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 40 Mins</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Sambal Bunga Kantan</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-spa"></i> Aromatic</span>
+                <span><i class="fas fa-utensils"></i> Appetizer</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">A fresh pounded sambal mixed with finely sliced torch ginger flower for a fragrant and unique floral taste.</p>
+            <a href="kantan.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://tse2.mm.bing.net/th/id/OIP.5YIDYjsSa3-ROw3rLBh0UwHaE7?rs=1&pid=ImgDetMain&o=7&rm=3');">
+            <span class="time-tag"><i class="far fa-clock"></i> 60 Mins</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Puding Diraja</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-crown"></i> Pekan Origin</span>
+                <span><i class="fas fa-egg"></i> Royal Dessert</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">A majestic royal dessert combining sweet bananas, golden egg net (jala emas), prunes, and crunchy cashews.</p>
+            <a href="puding.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <p>© 2026 Serumpun Rasa. All rights reserved.</p>
+</footer>
+
+<script>
+    function searchRecipe() {
+        let input = document.getElementById('searchInput').value.toLowerCase();
+        
+        let cards = document.getElementsByClassName('recipe-card');
+        let noResult = document.getElementById('noResult');
+        let hasResults = false;
+
+        for (let i = 0; i < cards.length; i++) {
+            let title = cards[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
+            let description = cards[i].getElementsByTagName('p')[0].innerText.toLowerCase();
+
+            if (title.includes(input) || description.includes(input)) {
+                cards[i].style.display = "block";
+                hasResults = true;
+            } else {
+                cards[i].style.display = "none";
+            }
+        }
+
+        if (hasResults) {
+            noResult.style.display = "none";
+        } else {
+            noResult.style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>
