@@ -318,12 +318,12 @@
             <li class="dropdown">
                 <a href="#" class="active">Borneo</a>
                 <div class="dropdown-content">
-                    <a href="#" class="active">Sabah</a>
-                    <a href="#">Sarawak</a>
+                    <a href="sabah.html" class="active">Sabah</a>
+                    <a href="sarawak.html">Sarawak</a>
                 </div>
             </li>
             <li class="contact-btn-container">
-                <a href="#" class="contact-btn">Contact</a></li>
+                <a href="contact.html" class="contact-btn">Contact</a></li>
         </ul>
     </nav>
 </header>
@@ -456,10 +456,10 @@
             let description = cards[i].getElementsByTagName('p')[0].innerText.toLowerCase();
 
             if (title.includes(input) || description.includes(input)) {
-                cards[i].style.display = "block"; // Tunjukkan kad
+                cards[i].style.display = "block"; 
                 hasResults = true;
             } else {
-                cards[i].style.display = "none"; // Sembunyikan kad
+                cards[i].style.display = "none"; 
             }
         }
 
@@ -473,3 +473,4 @@
 
 </body>
 </html>
+
