@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Serumpun Rasa</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-    <!-- Fonts & AOS -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -170,12 +170,11 @@
     <div class="logo"><h1>Serumpun<span>Rasa</span></h1></div>
     <nav>
         <ul>
-            <li><a href="home.html" class="active">Home</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
             <li class="dropdown">
                 <a href="#">Selatan</a>
                 <div class="dropdown-content">
                     <a href="selatanjohor.html">Johor</a>
-                    <a href="selatanselangor.html">Selangor</a>
                     <a href="selatannegeri.html">Negeri Sembilan</a>
                     <a href="selatanmelaka.html">Melaka</a>
                 </div>
@@ -256,7 +255,7 @@
     <h2 class="section-title" data-aos="fade-up">Most Popular Recipes</h2>
     <div class="recipe-grid">
         <div class="recipe-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="recipe-img" style="background-image: url('https://www.rasa.my/wp-content/uploads/2020/04/Untitled-design-2020-04-08T221317.348.jpg');"></div>
+            <div class="recipe-img" style="background-image: url('https://www.rasa.my/wp-content/uploads/2020/04/Untitled-design-2020-04-08T221317.348.jpg');">recipemeeban.html</div>
             <div class="recipe-info">
                 <span>SELATAN</span>
                 <h3>Mee Bandung Muar</h3>
@@ -264,7 +263,7 @@
             </div>
         </div>
         <div class="recipe-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="recipe-img" style="background-image: url('https://mypenang.gov.my/uploads/page/45/images/Penang_FoodLifestyle_FB_CurryMee.jpg');"></div>
+            <div class="recipe-img" style="background-image: url('https://mypenang.gov.my/uploads/page/45/images/Penang_FoodLifestyle_FB_CurryMee.jpg');">whitecurry.html</div>
             <div class="recipe-info">
                 <span>UTARA</span>
                 <h3>Penang White Curry</h3>
@@ -272,7 +271,7 @@
             </div>
         </div>
         <div class="recipe-card" data-aos="fade-up" data-aos-delay="300">
-            <div class="recipe-img" style="background-image: url('https://images.deliveryhero.io/image/fd-my/LH/j1rb-hero.jpg');"></div>
+            <div class="recipe-img" style="background-image: url('https://images.deliveryhero.io/image/fd-my/LH/j1rb-hero.jpg');">nasikerabu.html</div>
             <div class="recipe-info">
                 <span>PANTAI TIMUR</span>
                 <h3>Nasi Kerabu</h3>
@@ -280,7 +279,7 @@
             </div>
         </div>
         <div class="recipe-card" data-aos="fade-up" data-aos-delay="400">
-            <div class="recipe-img" style="background-image: url('https://t3.ftcdn.net/jpg/03/69/40/10/360_F_369401075_9wjEybFlZfrPsyfuDWCoA78B6Ix57zg6.jpg');"></div>
+            <div class="recipe-img" style="background-image: url('https://t3.ftcdn.net/jpg/03/69/40/10/360_F_369401075_9wjEybFlZfrPsyfuDWCoA78B6Ix57zg6.jpg');">ambuyat.html</div>
             <div class="recipe-info">
                 <span>BORNEO</span>
                 <h3>Ambuyat</h3>
@@ -297,7 +296,6 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init({ duration:1000, once:true });
-
     const counters = document.querySelectorAll('.counter');
     const startCounter = (el) => {
         const target = +el.getAttribute('data-target');
