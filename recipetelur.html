@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="ms">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +9,10 @@
 
     <style>
         :root {
-            --primary-color: #e2725b;   
+            --primary-color: #e2725b;  
             --secondary-color: #2f3640; 
             --accent-color: #f39c12;    
-            --bg-light: #ffffff;       
+            --bg-light: #ffffff;        
             --text-dark: #2f3640;
         }
 
@@ -105,6 +104,34 @@
 
         .ingredient-item input { margin-top: 5px; margin-right: 12px; accent-color: var(--primary-color); width: 16px; height: 16px; flex-shrink: 0; }
 
+        .video-pautan-box {
+            background: linear-gradient(135deg, #ffffff 0%, #fefefe 100%);
+            padding: 30px; border-radius: 20px; margin-bottom: 40px;
+            border: 1px solid #eee; box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            display: flex; align-items: center; gap: 25px;
+            position: relative; overflow: hidden;
+        }
+
+        .video-pautan-box::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 6px; height: 100%;
+            background: var(--primary-color);
+        }
+
+        .video-thumbnail {
+            flex-shrink: 0; width: 120px; height: 120px;
+            background: url('https://wadahdbp.my/app/uploads/2025/03/Green-and-White-Modern-Digital-Marketing-Agency-Professional-Instagram-Post-1-300x300.jpg') center/cover;
+            border-radius: 15px; display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 5px 15px rgba(226, 114, 91, 0.2);
+        }
+
+        .btn-youtube {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: #ff0000; color: white; padding: 10px 20px;
+            border-radius: 50px; text-decoration: none; font-weight: 600;
+            font-size: 14px; transition: 0.3s;
+        }
+        .btn-youtube:hover { background: #cc0000; transform: translateY(-2px); }
+
         .steps-container h3 { margin: 40px 0 20px 0; font-size: 28px; font-family: 'Playfair Display', serif; color: var(--primary-color); }
         
         .step-card {
@@ -148,24 +175,13 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            transition: 0.3s;
         }
-        
-        button#printBtn:hover { background: #c55a45; }
 
         footer { background:#2c3e50; color: white; padding: 20px 0; text-align: center; margin-top: 40px; }
 
         @media (max-width: 992px) {
             .recipe-header, .recipe-container { grid-template-columns: 1fr; }
-            .recipe-image-big { height: 300px; }
-        }
-
-        @media print {
-            header, .video-card-section, footer, button { display: none !important; }
-            .recipe-container { display: block !important; padding: 0; }
-            .recipe-header { display: flex; flex-direction: row; gap: 20px; padding: 0; }
-            .recipe-image-big { width: 200px; height: auto; }
-            body { background-color: white; font-size: 12pt; }
+            .video-pautan-box { flex-direction: column; text-align: center; }
         }
     </style>
 </head>
@@ -179,19 +195,19 @@
 </header>
 
 <section class="recipe-header">
-    <img src="https://resepichenom.com/_next/image?url=https%3A%2F%2Fresepichenom.com%2Fimages%2Frecipes%2FLempeng_Sambal_Bilis_2.webp&w=1080&q=75" alt="Lempeng and Sambal Bilis" class="recipe-image-big">
+    <img src="https://wadahdbp.my/app/uploads/2025/03/Green-and-White-Modern-Digital-Marketing-Agency-Professional-Instagram-Post-1-300x300.jpg" alt="Telur Pindang" class="recipe-image-big">
     <div class="recipe-meta">
         <span style="color: var(--primary-color); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Johor Heritage Recipe</span>
-        <h2>Lempeng and Sambal Bilis</h2>
-        <p>Lempeng with anchovy sambal is a simple traditional dish, yet packed with spicy and savory flavors.</p>
+        <h2>Telur Pindang</h2>
+        <p>A traditional Malay dish slow-cooked with a blend of spices and herbs, resulting in a dark brown color and fragrant aroma.</p>
         
         <div class="stats-bar">
-            <div class="stat-item"><i class="fas fa-clock"></i><span>30 Minutes</span></div>
-            <div class="stat-item"><i class="fas fa-signal"></i><span>Easy - Medium</span></div>
-     
+            <div class="stat-item"><i class="fas fa-clock"></i><span>2 Days+</span></div>
+            <div class="stat-item"><i class="fas fa-signal"></i><span>Intermediate</span></div>
+            <div class="stat-item"><i class="fas fa-user-friends"></i><span>4-5 Servings</span></div>
         </div>
 
-        <button id="printBtn">
+        <button id="printBtn" onclick="window.print()">
             <i class="fas fa-print"></i> Print Recipe
         </button>
     </div>
@@ -200,87 +216,49 @@
 <div class="recipe-container">
     <aside class="ingredients-side">
         <div class="ingredients-card">
-            <h3>PANCAKE INGREDIENTS</h3>
-            <div class="ingredient-item"><input type="checkbox"><span>3 cups wheat flour</span></div>
-            <div class="ingredient-item"><input type="checkbox"><span>4 - 4 1/2 cups water</span></div>
-            <div class="ingredient-item"><input type="checkbox"><span>2 tbsp cooking oil</span></div>
-            <div class="ingredient-item"><input type="checkbox"><span>1 tbsp sugar</span></div>
-            <div class="ingredient-item"><input type="checkbox"><span>1/2 tsp salt</span></div>
-
-            <h3>SAMBAL INGREDIENTS</h3>
-            <div class="ingredient-item"><input type="checkbox"><span>150g-200g anchovies</span></div>
-            <div class="ingredient-item"><input type="checkbox"><span>1 cup cooking oil</span></div>
-            <div class="ingredient-item"><input type="checkbox"><span>2 large onions</span></div>
-            <div class="ingredient-item"><input type="checkbox"><span>15-20 dried chilies</span></div>
-            <div class="ingredient-item"><input type="checkbox"><span>4 shallots & 3 cloves garlic</span></div>
-            <div class="ingredient-item"><input type="checkbox"><span>1/2 inch shrimp paste (belacan)</span></div>
-            <div class="ingredient-item"><input type="checkbox"><span>1 piece palm sugar & tamarind juice</span></div>
-
-                   </div>
+            <h3>RAMUAN TELUR PINDANG</h3>
+            <div class="ingredient-item"><input type="checkbox"><span>1 papan telur (30 biji)</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>1 sb ketumbar / jintan manis / putih</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>Rempah 4 beradik</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>2 botol kicap</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>Daun Manggis / Mengkudu / Jambu Batu</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>Daun Senduduk / Serai Wangi / Pandan</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>5 batang daun kari & 6 batang serai</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>10 biji bawang merah (belah, ada kulit)</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>3 inci lengkuas (hiris)</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>Air (paras tenggelam telur)</span></div>
+        </div>
     </aside>
 
     <main class="steps-side">
-        <div class="video-card-section" style="background: linear-gradient(135deg, #ffffff 0%, #fefefe 100%); padding: 30px; border-radius: 20px; margin-bottom: 40px; border: 1px solid #eee; box-shadow: 0 10px 30px rgba(0,0,0,0.05); display: flex; align-items: center; gap: 25px; position: relative; overflow: hidden;">
-            <div style="position: absolute; top: 0; left: 0; width: 6px; height: 100%; background: var(--primary-color);"></div>
-            <div style="flex-shrink: 0; width: 120px; height: 120px; background: url('https://resepichenom.com/_next/image?url=https%3A%2F%2Fresepichenom.com%2Fimages%2Frecipes%2FLempeng_Sambal_Bilis_2.webp&w=1080&q=75') center/cover; border-radius: 15px; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(226, 114, 91, 0.2);">
-                <i class="fab fa-youtube" style="color: white; font-size: 40px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));"></i>
+        <div class="video-pautan-box">
+            <div class="video-thumbnail">
+                <i class="fab fa-youtube" style="color: white; font-size: 40px;"></i>
             </div>
             <div style="flex-grow: 1;">
-                <h3 style="margin-bottom: 8px; font-family: 'Playfair Display', serif; color: var(--secondary-color); font-size: 22px; margin-top: 0;">Exclusive Video Tutorial</h3>
-                <p style="font-size: 14px; color: #666; margin-bottom: 15px; line-height: 1.5;">Want to see a clearer preparation method? Watch the full step-by-step tutorial video on the official YouTube channel.</p>
-                <a href="https://youtu.be/zCAdteITrpk?si=B0vlouCleFO859I8" target="_blank" style="display: inline-flex; align-items: center; gap: 10px; background: #ff0000; color: white; padding: 10px 20px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 14px; transition: 0.3s; box-shadow: 0 4px 12px rgba(255, 0, 0, 0.2);">
-                    <i class="fab fa-youtube"></i> Watch on YouTube
+                <h3 style="margin-bottom: 8px; font-family: 'Playfair Display', serif; color: var(--secondary-color); font-size: 22px;">Exclusive Tutorial Video</h3>
+                <p style="font-size: 14px; color: #666; margin-bottom: 15px;">Watch the complete tutorial on how to prepare Traditional Telur Pindang on our YouTube channel.
+.</p>
+                <a href="https://youtu.be/5kpfm5_I6T0?si=85RJ2NIOTh4OJoth" target="_blank" class="btn-youtube">
+                    <i class="fab fa-youtube"></i>Watch on YouTube
+
                 </a>
             </div>
         </div>
 
-        <div class="steps-container" style="margin-top: 0;">
-            <h3>Step by Step</h3>
-            
-            <h4 style="color: var(--primary-color); margin-top: 20px; margin-bottom: 15px;">HOW TO PREPARE LEMPENG</h4>
-            <div class="step-card">
-                <div class="step-number">1</div>
-                <div class="step-text">Mix wheat flour, salt, water, sugar, and cooking oil until well combined.</div>
-            </div>
-            <div class="step-card">
-                <div class="step-number">2</div>
-                <div class="step-text">Strain the batter if there are any flour lumps to ensure a smooth texture.</div>
-            </div>
-            <div class="step-card">
-                <div class="step-number">3</div>
-                <div class="step-text">Heat a non-stick pan and lightly grease it with a little oil.</div>
-            </div>
-            <div class="step-card">
-                <div class="step-number">4</div>
-                <div class="step-text">Pour 2 ladles of batter, spread it evenly, and cook until golden brown on both sides.</div>
-            </div>
-
-            <h4 style="color: var(--primary-color); margin-top: 30px; margin-bottom: 15px;">HOW TO PREPARE SAMBAL BILIS</h4>
-            <div class="step-card">
-                <div class="step-number">1</div>
-                <div class="step-text">Blend dried chilies, shallots, garlic, and shrimp paste (belacan).</div>
-            </div>
-            <div class="step-card">
-                <div class="step-number">2</div>
-                <div class="step-text">Sauté the blended ingredients until the oil separates. Add palm sugar and tamarind juice.</div>
-            </div>
-            <div class="step-card">
-                <div class="step-number">3</div>
-                <div class="step-text">Add the anchovies and season with salt to taste. Cook until the sambal reaches a beautiful consistency.</div>
-            </div>
-
-                        </div>
+        <div class="steps-container">
+            <h3>HOW TO COOK TELUR PINDANG</h3>
+            <div class="step-card"><div class="step-number">1</div><div class="step-text">Clean the eggs and all the herb leaves.</div></div>
+            <div class="step-card"><div class="step-number">2</div><div class="step-text">Place the spices into a pot, then arrange the herb leaves on top.</div></div>
+            <div class="step-card"><div class="step-number">3</div><div class="step-text">Carefully add the eggs. Pour in soy sauce and water until the eggs are fully submerged.</div></div>
+            <div class="step-card"><div class="step-number">4</div><div class="step-text">Simmer over very low heat. Once the eggs start to firm up, transfer them to a rice cooker (keep-warm mode) for 2 nights.</div></div>
         </div>
     </main>
 </div>
 
 <footer>
-    <p>&copy; 2026 Serumpun Rasa. Traditional Recipes | Updated: 18 Jan 2026</p>
+    <p>&copy; 2026 Serumpun Rasa. Resipi Telur Pindang Tradisional.</p>
 </footer>
-
-<script>
-    document.getElementById('printBtn').addEventListener('click', function() { window.print(); });
-</script>
 
 </body>
 </html>
