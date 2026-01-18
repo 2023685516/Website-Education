@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ms">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resipi Negeri Perak | Serumpun Rasa</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #d35400;
+            --secondary-color: #2c3e50;
+            --bg-light: #fffaf5;
+            --text-muted: #7f8c8d;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-light);
+        }
+
+        /* Header & Navigasi */
+        header {
+            background: #ffffff;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            color: #2c3e50;
+        }
+
+        .logo h1 span {
+            color: #d35400;
+        }
+
+        nav ul {
+    display: flex;
+    list-style:none;
+    align-items: center;
+    flex-wrap: nowrap; 
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            color: #d35400;
+        }
+
+        /* Dropdown */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            min-width: 180px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+            z-index: 1001;
+            border-radius: 8px;
+            top: 100%;
+            left: 0;
+            padding: 10px 0;
+            text-align: left;
+        }
+
+        .dropdown-content a {
+            color: #555 !important;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: block;
+            font-size: 13px;
+            text-transform: capitalize;
+            transition: 0.2s;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #fffaf5;
+            color: #d35400 !important;
+            padding-left: 25px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown > a::after {
+            content: ' ▾';
+            font-size: 10px;
+            vertical-align: middle;
+        }
+
+.dropdown-content a.active {
+    color: #d35400 !important;  /* oren */
+    font-weight: 700;
+    background-color: #fffaf5;
+}
+
+
+.contact-btn {
+    background-color: #d35400; /* Warna oren sama seperti tema */
+    color: white !important;   /* Paksa warna teks jadi putih */
+    padding: 6px 15px;       /* Ruang dalam butang */
+    border-radius: 50px;       /* Membulatkan tepi butang */
+    transition: 0.3s;
+    display: inline-block;
+    border: 2px solid #d35400;
+
+}
+
+.contact-btn:hover {
+    background-color: transparent; /* Tukar jadi kosong bila hover */
+    color: #d35400 !important;    /* Teks jadi oren */
+    transform: translateY(-2px);   /* Efek lompat sedikit */
+}
+
+/* Pastikan di Mobile butang tidak terlalu lebar */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .contact-btn-container {
+        margin-left: 0; /* Hilang auto supaya ikut column */
+        margin-top: 10px;
+    }
+}
+
+
+        /* Banner */
+        .state-banner {
+            height: 450px;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://media2.fishtank.my/media/lite/lite-art-and-vid/articles/ipoh.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .state-banner h2 { font-family: 'Playfair Display', serif; font-size: 45px; }
+        .breadcrumb { font-size: 14px; opacity: 0.8; margin-top: 10px; }
+
+        /* Search Bar */
+        .search-container {
+            padding: 30px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .search-box {
+            background: white;
+            padding: 12px 20px;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            width: 100%;
+            max-width: 400px;
+            border: 1px solid #eee;
+        }
+
+        .search-box input {
+            border: none;
+            outline: none;
+            padding-left: 10px;
+            width: 100%;
+            font-size: 14px;
+        }
+
+        /* Grid Resipi */
+        .recipe-grid {
+            padding: 0 8% 80px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            min-height: 300px;
+        }
+
+        .recipe-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .recipe-card:hover { transform: translateY(-5px); }
+
+        .recipe-img {
+            height: 220px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .time-tag {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            background: rgba(255,255,255,0.9);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .recipe-content { padding: 20px; }
+        .recipe-content h3 { margin-bottom: 8px; color: var(--secondary-color); }
+        
+        .recipe-info {
+            display: flex;
+            gap: 15px;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        .btn-view {
+            display: block;
+            text-align: center;
+            background: var(--secondary-color);
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-view:hover { background: var(--primary-color); }
+
+        /* Mesej Tiada Hasil */
+        #noResult {
+            display: none;
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        #noResult i {
+            font-size: 50px;
+            color: #ddd;
+            margin-bottom: 15px;
+        }
+
+        #noResult p {
+            color: var(--text-muted);
+            font-size: 18px;
+        }
+
+        footer { background: var(--secondary-color); color: white; padding: 15px 0; text-align: center; margin-top: 40px; }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <h1>Serumpun<span>Rasa</span></h1>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="active">Selatan</a>
+                <div class="dropdown-content">
+                    <a href="johor.html" class="active">Johor</a>
+                    <a href="#">Selangor</a>
+                    <a href="#">Negeri Sembilan</a>
+                    <a href="#">Melaka</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Utara</a>
+                <div class="dropdown-content">
+                    <a href="kedah.html">Kedah</a>
+                    <a href="penang.html">Pulau Pinang</a>
+                    <a href="perak.html">Perak</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Pantai Timur</a>
+                <div class="dropdown-content">
+                    <a href="#">Kelantan</a>
+                    <a href="#">Terengganu</a>
+                    <a href="#">Pahang</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Borneo</a>
+                <div class="dropdown-content">
+                    <a href="#">Sabah</a>
+                    <a href="#">Sarawak</a>
+                </div>
+            </li>
+            <li class="contact-btn-container">
+                <a href="#" class="contact-btn">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="state-banner">
+    <h2>Perak Darul Ridzuan</h2>
+    <div class="breadcrumb">A treasure trove of traditional heritage tastes and fresh river-based delicacies.</div>
+</div>
+
+<div class="search-container">
+    <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" id="searchInput" placeholder="Discover recipes..." onkeyup="searchRecipe()">
+    </div>
+</div>
+
+<main class="recipe-grid" id="recipeGrid">
+    
+    <div id="noResult">
+        <i class="fas fa-utensils"></i>
+        <p>Oops! We couldn’t find that recipe.</p>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://i.ytimg.com/vi/5L77hOwAemo/maxresdefault.jpg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 5 hours</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Rendang Tok</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-utensils"></i> Heavy</span>
+                <span><i class="fas fa-leaf"></i> Traditional</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">A dry, dark beef rendang that is slow-cooked for hours with a complex blend of spies, coconut milk, and toasted coconut.</p>
+            <a href="rendangtok.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://static.wixstatic.com/media/2744ee_4305286a53704a9a873525c55f551067.jpg/v1/fill/w_568,h_378,al_c,lg_1,q_80,enc_avif,quality_auto/2744ee_4305286a53704a9a873525c55f551067.jpg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 50 Minutes</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Ipoh Kai See Hor Fun</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-utensils"></i> Light</span>
+                <span><i class="fas fa-leaf"></i> Traditional</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Thin, flat rice noodles served in a crystal-clear soup made from chicken bones and prawn shells, topped with shredded chicken, prawns, and chives.</p>
+            <a href="ipohkai.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://images.deliveryhero.io/image/fd-my/LH/h361-listing.jpg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 90 minutes</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Nasi Ganja</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-utensils"></i> Heavy</span>
+                <span><i class="fas fa-leaf"></i> Traditional</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">A famous version of Nasi Kandar from Ipoh, nicknamed "Ganja" because of its "addictive" spicy red sambal and rich mixture of various curries.</p>
+            <a href="nasiganja.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+  <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://images.deliveryhero.io/image/fd-my/products/1414585004.jpg?width=%s');">
+            <span class="time-tag"><i class="far fa-clock"></i> 75 Minutes</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Mee Rebus Ramli</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-utensils"></i> Moderate</span>
+                <span><i class="fas fa-leaf"></i> Traditional</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Yellow noodles served in a thick, sweet-and-spicy gravy made from sweet potatoes.</p>
+            <a href="meerebus.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+  <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://img-global.cpcdn.com/recipes/c25c773d6e6d5e2d/680x781cq80/pekasam-ikan-air-tawar-resipi-foto-utama.jpg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 15 Minutes</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Ikan Pekasam</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-utensils"></i> Main Dish</span>
+                <span><i class="fas fa-leaf"></i> Traditional</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Freshwater fish fermented with salt, tamarind, and toasted rice flour. It is deep-fried with onions and chillies to create a salty, sour, and savory appetite whetter.</p>
+            <a href="pekasam.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+  <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://i.ytimg.com/vi/79H4QcZVpW8/maxresdefault.jpg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 60 Minutes</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Kuih Limas</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-utensils"></i> Sweet</span>
+                <span><i class="fas fa-star"></i> Dessert</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">A traditional double-layered custard dessert made from flour, coconut milk, and pandan juice, steamed in banana leaf boats.</p>
+            <a href="kuihlimas.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Serumpun Rasa. All right reserved. | Last updated: 18 January 2026</p>
+</footer>
+
+<script>
+    function searchRecipe() {
+        // Ambil teks carian dan tukar ke huruf kecil
+        let input = document.getElementById('searchInput').value.toLowerCase();
+        
+        // Ambil semua kad resipi
+        let cards = document.getElementsByClassName('recipe-card');
+        let noResult = document.getElementById('noResult');
+        
+        // Penanda untuk mengesan jika ada hasil dijumpai
+        let hasResults = false;
+
+        for (let i = 0; i < cards.length; i++) {
+            // Ambil teks dari h3 (tajuk) dan p (deskripsi)
+            let title = cards[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
+            let description = cards[i].getElementsByTagName('p')[0].innerText.toLowerCase();
+
+            // Jika teks carian ada dalam tajuk ATAU deskripsi
+            if (title.includes(input) || description.includes(input)) {
+                cards[i].style.display = "block"; // Tunjukkan kad
+                hasResults = true;
+            } else {
+                cards[i].style.display = "none"; // Sembunyikan kad
+            }
+        }
+
+        // Tunjukkan mesej "tidak dijumpai" jika hasResults tetap false
+        if (hasResults) {
+            noResult.style.display = "none";
+        } else {
+            noResult.style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>

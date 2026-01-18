@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penang Char Kway Teow Recipe | Serumpun Rasa</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #d35400;   
+            --secondary-color: #2c3e50; 
+            --bg-light: #fffaf5;        
+            --text-dark: #2c3e50;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+
+        header {
+            background: white;
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo h1 { font-family: 'Playfair Display', serif; font-size: 24px; color: var(--secondary-color); }
+        .logo span { color: var(--primary-color); }
+
+        .recipe-header {
+            padding: 40px 8%;
+            background: white;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .recipe-image-big {
+            width: 100%;
+            height: 400px;
+            border-radius: 20px;
+            object-fit: cover;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .recipe-meta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .stats-bar {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .stat-item { text-align: center; }
+        .stat-item i { color: var(--primary-color); display: block; margin-bottom: 5px; }
+        .stat-item span { font-size: 12px; font-weight: 600; text-transform: uppercase; }
+
+        .recipe-container {
+            padding: 50px 8%;
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 50px;
+        }
+
+        .ingredients-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+            border: 1px solid #f0f0f0;
+            margin-bottom: 30px;
+            height: fit-content;
+        }
+
+        .ingredients-card h3 { margin-bottom: 20px; border-left: 4px solid var(--primary-color); padding-left: 15px; }
+
+        .ingredient-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .ingredient-item input { margin-right: 12px; accent-color: var(--primary-color); width: 18px; height: 18px; }
+
+        .video-box {
+            width: 100%;
+            height: 350px;
+            background: #000;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://www.wokandskillet.com/wp-content/uploads/2016/07/Char-Kway-Teow.jpg');
+            background-size: cover;
+            background-position: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            margin-bottom: 40px;
+            border: 3px solid transparent;
+        }
+
+        .video-box:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+            box-shadow: 0 10px 25px rgba(211, 84, 0, 0.3);
+        }
+
+        .play-btn { font-size: 70px; color: white; margin-bottom: 10px; }
+
+        .step-card {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 25px;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .step-number {
+            background: var(--primary-color);
+            color: white;
+            width: 40px; height: 40px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: bold; flex-shrink: 0;
+        }
+
+        footer { background: var(--secondary-color); color: white; padding: 20px 0; text-align: center; margin-top: 40px; }
+
+        @media (max-width: 992px) {
+            .recipe-header, .recipe-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo"><h1>Serumpun<span>Rasa</span></h1></div>
+    <a href="penang.html" style="text-decoration: none; color: var(--primary-color); font-weight: 600;">
+        <i class="fas fa-chevron-left"></i> Back
+    </a>
+</header>
+
+<section class="recipe-header">
+    <img src="https://www.wokandskillet.com/wp-content/uploads/2016/07/Char-Kway-Teow.jpg" alt="Char Kway Teow" class="recipe-image-big">
+    <div class="recipe-meta">
+        <span style="color: var(--primary-color); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Legendary Street Food</span>
+        <h2>Penang Char Kway Teow</h2>
+        <p>A smoky, savory stir-fried noodle dish that is synonymous with Penang. It features high-heat cooking to achieve "Wok Hei" (breath of the wok).</p>
+        
+        <div class="stats-bar">
+            <div class="stat-item"><i class="fas fa-clock"></i><span>25 Mins</span></div>
+            <div class="stat-item"><i class="fas fa-fire"></i><span>High Heat</span></div>
+            <div class="stat-item"><i class="fas fa-user-friends"></i><span>1-2 Servings</span></div>
+        </div>
+
+        <button onclick="window.print()" style="background: var(--primary-color); color: white; border: none; padding: 12px 25px; border-radius: 8px; font-weight: 600; cursor: pointer;">
+            <i class="fas fa-print"></i> Print Recipe
+        </button>
+    </div>
+</section>
+
+<div class="recipe-container">
+    <aside class="ingredients-side">
+        <div class="ingredients-card">
+            <h3>Noodles & Base</h3>
+            <div class="ingredient-item"><input type="checkbox"><span>300g Flat Rice Noodles (Kway Teow)</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>2 cloves Garlic (minced)</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>Lard or Vegetable Oil</span></div>
+        </div>
+
+        <div class="ingredients-card">
+            <h3>Proteins & Veggies</h3>
+            <div class="ingredient-item"><input type="checkbox"><span>6 Large Prawns</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>Cockles (Kerang)</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>1 Egg</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>Bean Sprouts & Chives</span></div>
+        </div>
+
+        <div class="ingredients-card">
+            <h3>The Sauce Mix</h3>
+            <div class="ingredient-item"><input type="checkbox"><span>Light & Dark Soy Sauce</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>Oyster Sauce</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>Chili Paste (optional)</span></div>
+        </div>
+    </aside>
+
+    <main class="steps-side">
+        <a href="https://www.youtube.com/watch?v=UIOFRkpA4I4" target="_blank" class="video-box">
+            <div class="play-btn"><i class="fas fa-play-circle"></i></div>
+            <h4 style="font-size: 20px;">Watch Master At Work</h4>
+            <p style="color: rgba(255,255,255,0.8);">Authentic Michelin-style Char Kway Teow Tutorial</p>
+        </a>
+
+        <div class="steps-container">
+            <h3>Preparation Steps</h3>
+            
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-text">
+                    <strong>High Heat Start:</strong> Heat your wok until it is smoking. Add oil/lard and sauté minced garlic and prawns until the prawns are half-cooked.
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-text">
+                    <strong>Noodle Sear:</strong> Add the flat rice noodles and spread them out. Pour in your prepared sauce mix and chili paste. Stir-fry rapidly on maximum heat to get the smoky "Wok Hei."
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-text">
+                    <strong>The Final Mix:</strong> Push noodles to the side, crack an egg into the center, and scramble it slightly before mixing it back into the noodles.
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <div class="step-text">
+                    <strong>The Crunch:</strong> Quickly toss in the bean sprouts, chives, and cockles. Stir for another 30 seconds until the sprouts are just wilted but still crunchy. Serve immediately!
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<footer>
+    <p>&copy; 2026 Serumpun Rasa. Penang Heritage Street Food Series.</p>
+</footer>
+
+</body>
+</html>
