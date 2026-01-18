@@ -1,10 +1,9 @@
-<!DOCTYPE html>
 <html lang="ms">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resipi Negeri Johor | Serumpun Rasa</title>
+    <title>Serumpun Rasa</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -23,8 +22,6 @@
             font-family: 'Poppins', sans-serif;
             background-color: var(--bg-light);
         }
-
-        /* Header & Navigasi */
         header {
             background: #ffffff;
             padding: 25px 5%;
@@ -125,10 +122,10 @@
 
 
 .contact-btn {
-    background-color: #d35400; /* Warna oren sama seperti tema */
-    color: white !important;   /* Paksa warna teks jadi putih */
-    padding: 6px 15px;       /* Ruang dalam butang */
-    border-radius: 50px;       /* Membulatkan tepi butang */
+    background-color: #d35400; 
+    color: white !important;   
+    padding: 6px 15px;       
+    border-radius: 50px;       
     transition: 0.3s;
     display: inline-block;
     border: 2px solid #d35400;
@@ -136,25 +133,22 @@
 }
 
 .contact-btn:hover {
-    background-color: transparent; /* Tukar jadi kosong bila hover */
-    color: #d35400 !important;    /* Teks jadi oren */
-    transform: translateY(-2px);   /* Efek lompat sedikit */
+    background-color: transparent;
+    color: #d35400 !important;   
+    transform: translateY(-2px);   
 }
 
-/* Pastikan di Mobile butang tidak terlalu lebar */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
         align-items: flex-start;
     }
     .contact-btn-container {
-        margin-left: 0; /* Hilang auto supaya ikut column */
+        margin-left: 0;
         margin-top: 10px;
     }
 }
 
-
-        /* Banner */
         .state-banner {
             height: 450px;
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
@@ -172,7 +166,6 @@
         .state-banner h2 { font-family: 'Playfair Display', serif; font-size: 45px; }
         .breadcrumb { font-size: 14px; opacity: 0.8; margin-top: 10px; }
 
-        /* Search Bar */
         .search-container {
             padding: 30px 8%;
             display: flex;
@@ -202,7 +195,6 @@
             font-size: 14px;
         }
 
-        /* Grid Resipi */
         .recipe-grid {
             padding: 0 8% 80px;
             display: grid;
@@ -265,7 +257,6 @@
 
         .btn-view:hover { background: var(--primary-color); }
 
-        /* Mesej Tiada Hasil */
         #noResult {
             display: none;
             grid-column: 1 / -1;
@@ -366,7 +357,7 @@
                 <span><i class="fas fa-fire"></i> Tradisional</span>
             </div>
             <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Masak Lemak Cili Api is a traditional dish rich in coconut milk and spiciness, usually cooked with fish, chicken, or vegetables.</p>
-            <a href="#" class="btn-view">Lihat Langkah Memasak</a>
+            <a href="recipelemak.html" class="btn-view">View Recipe</a>
         </div>
     </div>
 
@@ -377,11 +368,11 @@
         <div class="recipe-content">
             <h3>Tempoyak Daun Kayu</h3>
             <div class="recipe-info">
-                <span><i class="fas fa-utensils"></i> Mudah</span>
+                <span><i class="fas fa-utensils"></i> Easy</span>
                 <span><i class="fas fa-star"></i> Popular</span>
             </div>
             <p style="font-size: 14px; color: #666; margin-bottom: 20px;">A traditional sour-spicy dish made from tempoyak durian, cooked with daun kayu and a blend of spices.</p>
-            <a href="#" class="btn-view">Lihat Langkah Memasak</a>
+            <a href="recipetemp.html" class="btn-view">View Recipe</a>
         </div>
     </div>
 
@@ -392,11 +383,11 @@
         <div class="recipe-content">
             <h3>Kuih Sopang</h3>
             <div class="recipe-info">
-                <span><i class="fas fa-utensils"></i> Sederhana</span>
-                <span><i class="fas fa-leaf"></i> Pedas</span>
+                <span><i class="fas fa-utensils"></i> Intermediate</span>
+                <span><i class="fas fa-leaf"></i> Cool</span>
             </div>
             <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Kuih Sopang is a traditional Negeri Sembilan dessert that is sweet and chewy, made from rice flour and grated coconut.</p>
-            <a href="#" class="btn-view">Lihat Langkah Memasak</a>
+            <a href="recipekuih.html" class="btn-view">View Recipe</a>
         </div>
     </div>
 
@@ -407,11 +398,11 @@
         <div class="recipe-content">
             <h3>Gulai Jangek</h3>
             <div class="recipe-info">
-                <span><i class="fas fa-utensils"></i> Sederhana</span>
-                <span><i class="fas fa-leaf"></i> Pedas</span>
+                <span><i class="fas fa-utensils"></i> Intermediate</span>
+                <span><i class="fas fa-leaf"></i> Spicy</span>
             </div>
             <p style="font-size: 14px; color: #666; margin-bottom: 20px;">A traditional Negeri Sembilan dish with spicy coconut milk, made from beef and authentic spices.</p>
-            <a href="#" class="btn-view">Lihat Langkah Memasak</a>
+            <a href="recipegulai.html" class="btn-view">View Recipe</a>
         </div>
 </div>
 <div class="recipe-card">
@@ -421,11 +412,11 @@
         <div class="recipe-content">
             <h3>Sambal Gesek</h3>
             <div class="recipe-info">
-                <span><i class="fas fa-utensils"></i> Sederhana</span>
-                <span><i class="fas fa-leaf"></i> Pedas</span>
+                <span><i class="fas fa-utensils"></i> Intermediate</span>
+                <span><i class="fas fa-leaf"></i> Hot/Popular</span>
             </div>
             <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Sambal Gesek is spicy and aromatic, a blend of chili, anchovies, and spices that enhances every bite of hot rice.</p>
-            <a href="#" class="btn-view">Lihat Langkah Memasak</a>
+            <a href="recipegesek.html" class="btn-view">View Recipe</a>
         </div>
 </div>
         </div>
@@ -437,31 +428,25 @@
 
 <script>
     function searchRecipe() {
-        // Ambil teks carian dan tukar ke huruf kecil
         let input = document.getElementById('searchInput').value.toLowerCase();
         
-        // Ambil semua kad resipi
         let cards = document.getElementsByClassName('recipe-card');
         let noResult = document.getElementById('noResult');
         
-        // Penanda untuk mengesan jika ada hasil dijumpai
         let hasResults = false;
 
         for (let i = 0; i < cards.length; i++) {
-            // Ambil teks dari h3 (tajuk) dan p (deskripsi)
             let title = cards[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
             let description = cards[i].getElementsByTagName('p')[0].innerText.toLowerCase();
 
-            // Jika teks carian ada dalam tajuk ATAU deskripsi
             if (title.includes(input) || description.includes(input)) {
-                cards[i].style.display = "block"; // Tunjukkan kad
+                cards[i].style.display = "block"; 
                 hasResults = true;
             } else {
-                cards[i].style.display = "none"; // Sembunyikan kad
+                cards[i].style.display = "none"; 
             }
         }
 
-        // Tunjukkan mesej "tidak dijumpai" jika hasResults tetap false
         if (hasResults) {
             noResult.style.display = "none";
         } else {
@@ -471,4 +456,5 @@
 </script>
 
 </body>
+
 </html>
