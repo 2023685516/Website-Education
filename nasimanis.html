@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasi Manis Recipe | Serumpun Rasa</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #e2725b;  
+            --secondary-color: #2f3640; 
+            --accent-color: #f39c12;    
+            --bg-light: #ffffff;        
+            --text-dark: #2f3640;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+
+        header {
+            background: white;
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo h1 { font-family: 'Playfair Display', serif; font-size: 24px; color: var(--secondary-color); }
+        .logo span { color: var(--primary-color); }
+
+        .recipe-header {
+            padding: 40px 8%;
+            background: white;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .recipe-image-big {
+            width: 100%;
+            height: 400px;
+            border-radius: 20px;
+            object-fit: cover;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .recipe-meta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .stats-bar {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .stat-item { text-align: center; }
+        .stat-item i { color: var(--primary-color); display: block; margin-bottom: 5px; }
+        .stat-item span { font-size: 12px; font-weight: 600; text-transform: uppercase; }
+
+        .recipe-container {
+            padding: 50px 8%;
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 50px;
+        }
+
+        .ingredients-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+            border: 1px solid #f0f0f0;
+            height: fit-content;
+        }
+
+        .ingredients-card h3 { margin-bottom: 20px; border-left: 4px solid var(--primary-color); padding-left: 15px; }
+
+        .ingredient-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            cursor: pointer;
+        }
+
+        .ingredient-item input { margin-right: 12px; accent-color: var(--primary-color); width: 18px; height: 18px; }
+
+        .steps-container h3 { margin-bottom: 30px; font-size: 28px; font-family: 'Playfair Display', serif; }
+
+        .step-card {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            transition: 0.3s;
+            border: 1px solid #f0f0f0;
+        }
+
+        .step-card:hover { 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
+            transform: translateY(-2px);
+        }
+
+        .step-number {
+            background: var(--primary-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        button#printBtn {
+            background: var(--primary-color); 
+            color: white; 
+            border: none; 
+            padding: 12px 25px; 
+            border-radius: 8px; 
+            font-weight: 600; 
+            cursor: pointer;
+            margin-top: 15px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        footer { background:#2c3e50; color: white; padding: 20px 0; text-align: center; margin-top: 40px; }
+
+        @media (max-width: 992px) {
+            .recipe-header, .recipe-container { grid-template-columns: 1fr; }
+            .recipe-image-big { height: 300px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo"><h1>Serumpun<span>Rasa</span></h1></div>
+    <a href="javascript:history.back()" style="text-decoration: none; color: var(--primary-color); font-weight: 600;">
+        <i class="fas fa-chevron-left"></i> Back
+    </a>
+</header>
+
+<section class="recipe-header">
+    <img src="https://3.bp.blogspot.com/-epv_kJv8zzg/UJSHWZPvKhI/AAAAAAAAKHg/5BC_iVUMOeQ/s1600/wajik1a.jpg" alt="Nasi Manis" class="recipe-image-big">
+    <div class="recipe-meta">
+        <span style="color: var(--primary-color); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Resepi Warisan Kelantan</span>
+        <h2>Nasi Manis</h2>
+        <p>A celebratory sweet dish from Kelantan made of sticky glutinous rice glazed with rich palm sugar and coconut milk. It's decadent, glossy, and perfect for special occasions.</p>
+        
+        <div class="stats-bar">
+            <div class="stat-item"><i class="fas fa-clock"></i><span>60 Mins</span></div>
+            <div class="stat-item"><i class="fas fa-signal"></i><span>Easy</span></div>
+            <div class="stat-item"><i class="fas fa-user-friends"></i><span>6-8 Pax</span></div>
+        </div>
+
+        <button id="printBtn">
+            <i class="fas fa-print"></i> Print Recipe
+        </button>
+    </div>
+</section>
+
+<div class="recipe-container">
+    <aside class="ingredients-side">
+        <div class="ingredients-card">
+            <h3>Ingredients</h3>
+            
+            <div class="ingredient-item"><input type="checkbox"><span>3 cawan beras pulut</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>2 cawan santan pekat</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>1½–2 cawan gula Melaka (ikut manis)</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>1-2 helai daun pandan (disimpul)</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>Sedikit garam</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>Air secukupnya</span></div>
+        </div>
+    </aside>
+
+    <main class="steps-side">
+        <div class="steps-container">
+            <h3>Step-by-Step Instructions</h3>
+            
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-text">
+                    <strong>Rinse and Soak:</strong> Wash the glutinous rice until the water runs clear. Soak the rice in water for about 1–2 hours. This ensures the rice cooks evenly and achieves the perfect texture.
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-text">
+                    <strong>Cook the Rice:</strong> Drain the soaked rice. Steam it or use a rice cooker until the grains are soft and fully cooked. Keep the cooked rice warm while you prepare the sauce.
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-text">
+                    <strong>Prepare Sweet Coconut Sauce:</strong> In a pot over medium heat, combine coconut milk, palm sugar (gula Melaka), pandan leaves, and a pinch of salt. Stir until the sugar is completely dissolved and the mixture is fragrant.
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <div class="step-text">
+                    <strong>Combine:</strong> Place the warm cooked rice in a large mixing bowl. Pour the hot sweet coconut sauce over it. Use a wooden spatula to mix thoroughly until every grain is glossy and evenly coated.
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">5</div>
+                <div class="step-text">
+                    <strong>Set and Serve:</strong> Press the mixture into a tray or container to firm it up. Once it has cooled slightly and set, scoop or cut into pieces. Serve warm or at room temperature for the best flavor.
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<footer>
+    <p>&copy; 2026 Serumpun Rasa. All rights reserved.</p>
+</footer>
+
+<script>
+    document.getElementById('printBtn').addEventListener('click', function() {
+        window.print();
+    });
+</script>
+
+</body>
+</html>
