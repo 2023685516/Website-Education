@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ms">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Perak | Serumpun Rasa</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="perak.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <h1>Serumpun<span>Rasa</span></h1>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Selatan</a>
+                <div class="dropdown-content">
+                    <a href="selatanjohor.html">Johor</a>
+                    <a href="selatannegeri.html">Negeri Sembilan</a>
+                    <a href="selatanmelaka.html">Melaka</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="active">Utara</a>
+                <div class="dropdown-content">
+                    <a href="kedah.html">Kedah</a>
+                    <a href="penang.html">Pulau Pinang</a>
+                    <a href="perak.html" class="active">Perak</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Pantai Timur</a>
+                <div class="dropdown-content">
+                    <a href="kelantan.html">Kelantan</a>
+                    <a href="terengganu.html">Terengganu</a>
+                    <a href="pahang.html">Pahang</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Borneo</a>
+                <div class="dropdown-content">
+                    <a href="sabah.html">Sabah</a>
+                    <a href="sarawak.html">Sarawak</a>
+                </div>
+            </li>
+            <li class="contact-btn-container">
+                <a href="contact.html" class="contact-btn">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="state-banner">
+    <h2>Perak Darul Ridzuan</h2>
+    <div class="breadcrumb">A treasure trove of traditional heritage tastes and fresh river-based delicacies.</div>
+</div>
+
+<div class="search-container">
+    <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" id="searchInput" placeholder="Discover recipes..." onkeyup="searchRecipe()">
+    </div>
+</div>
+
+<main class="recipe-grid" id="recipeGrid">
+    
+    <div id="noResult">
+        <i class="fas fa-utensils"></i>
+        <p>Oops! We couldn’t find that recipe.</p>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://i.ytimg.com/vi/5L77hOwAemo/maxresdefault.jpg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 5 hours</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Rendang Tok</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-utensils"></i> Heavy</span>
+                <span><i class="fas fa-leaf"></i> Traditional</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">A dry, dark beef rendang that is slow-cooked for hours with a complex blend of spies, coconut milk, and toasted coconut.</p>
+            <a href="rendangtok.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://static.wixstatic.com/media/2744ee_4305286a53704a9a873525c55f551067.jpg/v1/fill/w_568,h_378,al_c,lg_1,q_80,enc_avif,quality_auto/2744ee_4305286a53704a9a873525c55f551067.jpg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 50 Minutes</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Ipoh Kai See Hor Fun</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-utensils"></i> Light</span>
+                <span><i class="fas fa-leaf"></i> Traditional</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Thin, flat rice noodles served in a crystal-clear soup made from chicken bones and prawn shells, topped with shredded chicken, prawns, and chives.</p>
+            <a href="ipohkai.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://images.deliveryhero.io/image/fd-my/LH/h361-listing.jpg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 90 minutes</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Nasi Ganja</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-utensils"></i> Heavy</span>
+                <span><i class="fas fa-leaf"></i> Traditional</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">A famous version of Nasi Kandar from Ipoh, nicknamed "Ganja" because of its "addictive" spicy red sambal and rich mixture of various curries.</p>
+            <a href="nasiganja.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://images.deliveryhero.io/image/fd-my/products/1414585004.jpg?width=%s');">
+            <span class="time-tag"><i class="far fa-clock"></i> 75 Minutes</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Mee Rebus Ramli</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-utensils"></i> Moderate</span>
+                <span><i class="fas fa-leaf"></i> Traditional</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Yellow noodles served in a thick, sweet-and-spicy gravy made from sweet potatoes.</p>
+            <a href="meerebus.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://img-global.cpcdn.com/recipes/c25c773d6e6d5e2d/680x781cq80/pekasam-ikan-air-tawar-resipi-foto-utama.jpg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 15 Minutes</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Ikan Pekasam</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-utensils"></i> Main Dish</span>
+                <span><i class="fas fa-leaf"></i> Traditional</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Freshwater fish fermented with salt, tamarind, and toasted rice flour. It is deep-fried with onions and chillies to create a salty, sour, and savory appetite whetter.</p>
+            <a href="pekasam.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://i.ytimg.com/vi/79H4QcZVpW8/maxresdefault.jpg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 60 Minutes</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Kuih Limas</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-utensils"></i> Sweet</span>
+                <span><i class="fas fa-star"></i> Dessert</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">A traditional double-layered custard dessert made from flour, coconut milk, and pandan juice, steamed in banana leaf boats.</p>
+            <a href="kuihlimas.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Serumpun Rasa. All right reserved. | Last updated: 18 January 2026</p>
+</footer>
+
+<script src="perak.js"></script>
+
+</body>
+</html>

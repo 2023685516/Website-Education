@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ms">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Penang | Serumpun Rasa </title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="penang.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <h1>Serumpun<span>Rasa</span></h1>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Selatan</a>
+                <div class="dropdown-content">
+                    <a href="selatanjohor.html">Johor</a>
+                    <a href="selatannegeri.html">Negeri Sembilan</a>
+                    <a href="selatanmelaka.html">Melaka</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="active">Utara</a>
+                <div class="dropdown-content">
+                    <a href="kedah.html">Kedah</a>
+                    <a href="penang.html" class="active">Pulau Pinang</a>
+                    <a href="perak.html">Perak</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Pantai Timur</a>
+                <div class="dropdown-content">
+                    <a href="kelantan.html">Kelantan</a>
+                    <a href="terengganu.html">Terengganu</a>
+                    <a href="pahang.html">Pahang</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Borneo</a>
+                <div class="dropdown-content">
+                    <a href="sabah.html">Sabah</a>
+                    <a href="sarawak.html">Sarawak</a>
+                </div>
+            </li>
+            <li class="contact-btn-container">
+                <a href="contact.html" class="contact-btn">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="state-banner">
+    <h2>Pulau Pinang Pearl of The Orient</h2>
+    <div class="breadcrumb">A world-famous food paradise where diverse cultures blend into iconic street flavors.</div>
+</div>
+
+<div class="search-container">
+    <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" id="searchInput" placeholder="Discover recipes..." onkeyup="searchRecipe()">
+    </div>
+</div>
+
+<main class="recipe-grid" id="recipeGrid">
+    
+    <div id="noResult">
+        <i class="fas fa-utensils"></i>
+        <p>Oops! We couldn’t find that recipe.</p>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4rZ5zrOOo-114XQWf5-tuXGSYEKpjYrgjjg&s');">
+            <span class="time-tag"><i class="far fa-clock"></i> 75 Minutes</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Nasi Kandar</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-utensils"></i> Heavy</span>
+                <span><i class="fas fa-leaf"></i> Traditional</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">A popular northen Malaysian dish consisting of steamed rice served with a variety of rich curries, side dishes like fried chicken or honey beef, and "banjir".</p>
+            <a href="nasikandar.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiCPU_3onDTF4O7mth4UMdDfYPB1Ztm1I7LQ&s');">
+            <span class="time-tag"><i class="far fa-clock"></i> 95 Minutes</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Penang Asam Laksa</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-fire"></i> Tangy & Spicy</span>
+                <span><i class="fas fa-leaf"></i> Traditional</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">A tangy and spicy poached fish-based noodle soup. It features a sour broth made from tamarind (asam), served with thick shirmp paste.</p>
+            <a href="asamlaksa.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://www.wokandskillet.com/wp-content/uploads/2016/07/Char-Kway-Teow.jpg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 25 Minutes</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Char Kway Teow</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-utensils"></i> Sreet Food</span>
+                <span><i class="fas fa-star"></i> Savory</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Flat rice noodles stir-fried over high heat in a seasoned wok with prawn, cockles, bean sprouts, chives and eggs.</p>
+            <a href="kwayteow.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+  <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://images.deliveryhero.io/image/fd-my/LH/cbcj-listing.jpg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 20 Minutes</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Pasembur</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-utensils"></i> Snack</span>
+                <span><i class="fas fa-leaf"></i> Traditional</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">A Malaysian Indian-Muslim salad consisting of shredded cucumber, potatoes, beancurd, turnip, bean sprouts, and various crispy prawn fritters.</p>
+            <a href="pasembur.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+  <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://mypenang.gov.my/uploads/page/45/images/Penang_FoodLifestyle_FB_CurryMee.jpg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 70 Minutes</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Penang White Curry Mee</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-fire"></i> Spicy</span>
+                <span><i class="fas fa-leaf"></i> Traditional</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">A unique noodle soup served with a base of pale coconut milk broth. It is transformed into fiery red dish once the secret spicy chili paste is stirred in, usually topped with with cockles, cuttlefish, and tofu puffs.</p>
+            <a href="whitecurry.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+  <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://mypenang.gov.my/uploads/page/43/images/Penang_FoodLifestyle_FB_Chendol.jpg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 30 Minutes</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Teochew Chendul</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-utensils"></i> Sweet</span>
+                <span><i class="fas fa-star"></i> Dessert</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">A refreshing chilled dessert made of shaved ice, coconut milk, palm sugar, green rice flour jelly, and red beans.</p>
+            <a href="chendul.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Serumpun Rasa. All right reserved. | Last updated: 18 January 2026</p>
+</footer>
+
+<script src="penang.js"></script>
+
+</body>
+</html>

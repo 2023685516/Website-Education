@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ms">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kedah | Serumpun Rasa</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="kedah.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <h1>Serumpun<span>Rasa</span></h1>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Selatan</a>
+                <div class="dropdown-content">
+                    <a href="selatanjohor.html">Johor</a>
+                    <a href="selatannegeri.html">Negeri Sembilan</a>
+                    <a href="selatanmelaka.html">Melaka</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="active">Utara</a>
+                <div class="dropdown-content">
+                    <a href="kedah.html" class="active">Kedah</a>
+                    <a href="penang.html">Pulau Pinang</a>
+                    <a href="perak.html">Perak</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Pantai Timur</a>
+                <div class="dropdown-content">
+                    <a href="kelantan.html">Kelantan</a>
+                    <a href="terengganu.html">Terengganu</a>
+                    <a href="pahang.html">Pahang</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Borneo</a>
+                <div class="dropdown-content">
+                    <a href="sabah.html">Sabah</a>
+                    <a href="sarawak.html">Sarawak</a>
+                </div>
+            </li>
+            <li class="contact-btn-container">
+                <a href="contact.html" class="contact-btn">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="state-banner">
+    <h2>Kedah Darul Aman</h2>
+    <div class="breadcrumb">State in northern Malaysia is known for its rice farming and traditional food made from simple local ingredients.</div>
+</div>
+
+<div class="search-container">
+    <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" id="searchInput" placeholder="Discover recipes..." onkeyup="searchRecipe()">
+    </div>
+</div>
+
+<main class="recipe-grid" id="recipeGrid">
+    
+    <div id="noResult">
+        <i class="fas fa-utensils" style="font-size: 40px; color: #ccc; margin-bottom: 10px;"></i>
+        <p>Oops! We couldn’t find that recipe.</p>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://ohmedia.my/wp-content/uploads/2022/11/laksa-kedah-rs.png.webp');">
+            <span class="time-tag"><i class="far fa-clock"></i> 85 Minutes</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Laksa Kedah</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-fire"></i> Spicy</span>
+                <span><i class="fas fa-leaf"></i> Traditional</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">A rice noodle dish served in a thick, savory gravy made from minced fish, garnished with fresh herbs and chilies.</p>
+            <a href="laksakedah.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjHcUj4NeJhs1tv0cfZSFfIVXERIahlSsAjKAofMxsWTR_VIAiXL3UXyyjAN7rZh5oNWT8IOeP30sDyTEt7mAS07QlGM3e9sfnXm23uRDcqQXPQE1ZNeEmpFTzbuqDgRDDn6HbHwSHshBU/s3971/DSC09755-01.jpeg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 65 Minutes</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Nasi Ulam Kedah</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-utensils"></i> Moderate</span>
+                <span><i class="fas fa-leaf"></i> Traditional</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Steamed white rice mixed with a variety of fresh jungle herbs and local aromatics. It is a fragrant dish typically enjoyed for breakfast or lunch.</p>
+            <a href="ulam.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQok8b9xXSQH4hvHWu1THqGDbG9-G-ysqDY0w&s');">
+            <span class="time-tag"><i class="far fa-clock"></i> 35 Minutes</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Pulut Harum Manis</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-utensils"></i> Sweet</span>
+                <span><i class="fas fa-star"></i> Dessert</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Steamed glutinous rice served with the famous local Harum Manis mango. This is highly sought-after dessert during the mango season.</p>
+            <a href="pulut.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjMshRbfNqraivcKW8eUQwwN_q_MwLRp4GFg&s');">
+            <span class="time-tag"><i class="far fa-clock"></i> 20 Minutes</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Peknga</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-utensils"></i> Light Snack</span>
+                <span><i class="fas fa-leaf"></i> Traditional</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">A traditional Kedah coconut pancake that is crispy on the outside and soft on the inside. It is a favourite for breakfast or evening tea.</p>
+            <a href="peknga.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQQrj2_y1EJYrrOmURPrvfFi5WtOmoMIBnyQ&s');">
+            <span class="time-tag"><i class="far fa-clock"></i> 35 Minutes</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Gulai Ketam</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-utensils"></i> Main Dish</span>
+                <span><i class="fas fa-leaf"></i> Traditional</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Fresh crabs simmered in a rich, spiced coconut milk curry, offering a delicious balance of spicy and naturally sweet flavors.</p>
+            <a href="gulaiketam.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://img-global.cpcdn.com/recipes/5627e6fb7d75b620/680x781cq80/kailan-ikan-rebus-berlada-resipi-foto-utama.jpg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 25 Minutes</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Ikan Rebus Berlada</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-utensils"></i> Main Dish</span>
+                <span><i class="fas fa-fire"></i> Spicy</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Fresh fish poached to perfection and served with a spicy chili sambal; a simple yet incredibly flavorful and healthy dish.</p>
+            <a href="berlada.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Serumpun Rasa. All right reserved. | Last updated: 18 January 2026</p>
+</footer>
+
+<script src="kedah.js"></script>
+
+</body>
+</html>
