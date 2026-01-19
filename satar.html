@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satar Ikan | Serumpun Rasa</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="satarstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+
+<header>
+    <div class="logo"><h1>Serumpun<span>Rasa</span></h1></div>
+    <a href="terengganu.html" style="text-decoration: none; color: var(--secondary-color); font-weight: 600;">
+        <i class="fas fa-chevron-left"></i> Back
+    </a>
+</header>
+
+<section class="recipe-header">
+    <img src="https://www.discoveryterengganu.com/wp-content/uploads/2024/05/4-1.jpg" alt="Satar Ikan" class="recipe-image-big">
+    <div class="recipe-meta">
+        <span style="color: var(--secondary-color); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Resepi Warisan Terengganu</span>
+        <h2>Satar Ikan</h2>
+        <p>A traditional grilled fish cake that captures the essence of Terengganu’s coastline. Made with seasoned fish paste and grated coconut, wrapped in banana leaves for a distinct smoky aroma.</p>
+        
+        <div class="stats-bar">
+            <div class="stat-item"><i class="fas fa-clock"></i><span>40 Mins</span></div>
+            <div class="stat-item"><i class="fas fa-signal"></i><span>Medium</span></div>
+            <div class="stat-item"><i class="fas fa-fire"></i><span>12-15 Pcs</span></div>
+        </div>
+
+        <button id="printBtn">
+            <i class="fas fa-print"></i> Print Recipe
+        </button>
+    </div>
+</section>
+
+<div class="recipe-container">
+    <aside class="ingredients-side">
+        <div class="ingredients-card">
+            <h3>Ingredients</h3>
+            
+            <h4 style="color: var(--secondary-color); margin-bottom: 10px;">Bahan Utama:</h4>
+            <div class="ingredient-item"><input type="checkbox"><span>1kg isi ikan (kembung/selayang/tenggiri)</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>1 cawan kelapa parut (muda)</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>1 biji telur & Daun kesum (dihiris halus)</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>Garam, gula & sedikit air asam jawa</span></div>
+
+            <h4 style="color: var(--secondary-color); margin: 15px 0 10px;">Bahan Kisar:</h4>
+            <div class="ingredient-item"><input type="checkbox"><span>10-30 biji cili padi (ikut pedas)</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>5-6 biji bawang merah & 3 ulas bawang putih</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>2 inci halia & 2 batang serai</span></div>
+
+            <h4 style="color: var(--secondary-color); margin: 15px 0 10px;">Lain-lain:</h4>
+            <div class="ingredient-item"><input type="checkbox"><span>Daun pisang (layur dahulu)</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>Lidi atau pencungkil gigi</span></div>
+        </div>
+    </aside>
+
+    <main class="steps-side">
+        <div class="steps-container">
+            <h3>Step-by-Step Instructions</h3>
+            
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-text">
+                    <strong>Prepare the Fish:</strong> Briefly boil the fresh fish until just cooked. Remove the bones and skin, keeping only the flesh. Pound or process into a coarse paste.
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-text">
+                    <strong>Make the Paste:</strong> Blend the chilies, shallots, garlic, ginger, and lemongrass into a coarse paste. Mix this thoroughly with the prepared fish flesh.
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-text">
+                    <strong>Mix Ingredients:</strong> Add grated coconut, sliced daun kesum, salt, sugar, egg, and tamarind juice. Stir until the mixture is well-combined and aromatic.
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <div class="step-text">
+                    <strong>Wrapping:</strong> Place a spoonful of the mixture on a piece of softened banana leaf. Shape into a small pyramid and secure with a toothpick.
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">5</div>
+                <div class="step-text">
+                    <strong>Grill to Perfection:</strong> Grill the satar over medium heat for 10–15 minutes, turning regularly until the banana leaves are charred and the filling is cooked through and smoky.
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<footer>
+    <p>&copy; 2026 Serumpun Rasa. All rights reserved. | Last updated: 18 January 2026</p>
+</footer>
+
+<script>
+    document.getElementById('printBtn').addEventListener('click', function() {
+        window.print();
+    });
+</script>
+
+</body>
+
+</html>
