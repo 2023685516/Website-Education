@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sambal Hitam Pahang | Serumpun Rasa</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sambalhitamstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+</head>
+<body>
+
+    <header>
+        <div class="logo"><h1>Serumpun<span>Rasa</span></h1></div>
+        <a href="pahang.html" style="text-decoration: none; color: var(--secondary-color); font-weight: 600;">
+            <i class="fas fa-chevron-left"></i> Back
+        </a>
+    </header>
+
+    <section class="recipe-header">
+        <img src="https://4.bp.blogspot.com/-bEWuPTAlyVE/V0-NZsgrYlI/AAAAAAAAVVc/IZWtRVBmJqUzmbDXoLCHO33qLun83ci8QCLcB/s1600/sambal-hitam-pahang.jpg" alt="Sambal Hitam" class="recipe-image-big">
+        <div class="recipe-meta">
+            <span style="color: var(--secondary-color); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Pahang Heritage Recipe</span>
+            <h2>Sambal Hitam Pahang</h2>
+            <p>A legendary spicy-sour paste from Pahang. Its signature dark color comes from hours of slow-cooking belimbing buluh until it caramelizes into a deep, rich black hue.</p>
+            
+            <div class="stats-bar">
+                <div class="stat-item"><i class="fas fa-clock"></i><span>4 Hours</span></div>
+                <div class="stat-item"><i class="fas fa-signal"></i><span>Patience</span></div>
+                <div class="stat-item"><i class="fas fa-archive"></i><span>1 Jar</span></div>
+            </div>
+
+            <button onclick="window.print()" style="background: var(--secondary-color); color: white; border: none; padding: 12px 25px; border-radius: 8px; font-weight: 600; cursor: pointer;">
+                <i class="fas fa-print"></i> Print Recipe
+            </button>
+        </div>
+    </section>
+
+    <div class="recipe-container">
+        <aside class="ingredients-side">
+            <div class="ingredients-card">
+                <h3>Ingredients</h3>
+                <h4 style="color: var(--secondary-color); margin-bottom: 10px;">Bahan Utama:</h4>
+                <div class="ingredient-item"><input type="checkbox"><span>500g belimbing buluh</span></div>
+                <div class="ingredient-item"><input type="checkbox"><span>15–20 biji cili padi</span></div>
+                <div class="ingredient-item"><input type="checkbox"><span>1 genggam ikan bilis</span></div>
+                <div class="ingredient-item"><input type="checkbox"><span>3–5 ulas bawang merah</span></div>
+                <div class="ingredient-item"><input type="checkbox"><span>Garam & Gula secukup rasa</span></div>
+                <div class="ingredient-item"><input type="checkbox"><span>Minyak masak</span></div>
+            </div>
+        </aside>
+
+        <main class="steps-side">
+            <div class="video-wrapper">
+                <video id="myVideo" controls muted loop>
+                    <source src="sambalhitam.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+                <div class="video-overlay" id="videoOverlay">
+                    <i class="fas fa-play-circle play-icon"></i>
+                    <p style="font-weight: 600; letter-spacing: 1px;">WATCH: THE ART OF SAMBAL HITAM</p>
+                </div>
+            </div>
+
+            <div class="steps-container">
+                <h3>Instructions</h3>
+                
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-text">
+                        <strong>Boil Belimbing Buluh:</strong> Place cleaned belimbing buluh in a pot without water. Cook over low heat for 2–4 hours until the fruit shrinks and turns dark brown/black.
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-text">
+                        <strong>Prepare Paste:</strong> Coarsely pound or blend the chillies, anchovies, and onions. Keep the texture chunky for a better mouthfeel.
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-text">
+                        <strong>Sauté:</strong> Heat oil and sauté the pounded mixture until fragrant and golden brown.
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-text">
+                        <strong>Combine:</strong> Add the darkened belimbing buluh into the pan. Mix well and season with salt and sugar to balance the acidity.
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">5</div>
+                    <div class="step-text">
+                        <strong>Cook to Perfection:</strong> Continue stirring until the sambal becomes thick, dry, and glossy. Let it cool before storing in a jar.
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Serumpun Rasa. All rights reserved. | Last updated: 18 January 2026</p>
+    </footer>
+
+    <script>
+        const video = document.getElementById('myVideo');
+        const overlay = document.getElementById('videoOverlay');
+
+        video.addEventListener('play', () => { 
+            overlay.style.display = 'none'; 
+            video.style.filter = 'brightness(1)';
+        });
+        
+        video.addEventListener('pause', () => { 
+            overlay.style.display = 'flex'; 
+            video.style.filter = 'brightness(0.6)';
+        });
+    </script>
+
+</body>
+
+</html>
