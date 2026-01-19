@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Terengganu | Serumpun Rasa</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="terengganustyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <h1>Serumpun<span>Rasa</span></h1>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Selatan</a>
+                <div class="dropdown-content">
+                    <a href="selatanjohor.html">Johor</a>
+                    <a href="selatannegeri.html">Negeri Sembilan</a>
+                    <a href="selatanmelaka">Melaka</a>
+                </div>
+            <li class="dropdown">
+                <a href="#">Utara</a>
+                <div class="dropdown-content">
+                    <a href="kedah.html">Kedah</a>
+                    <a href="penang.html">Pulau Pinang</a>
+                    <a href="perak.html">Perak</a>
+                </div>
+            </li>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="active">Pantai Timur</a>
+                <div class="dropdown-content">
+                    <a href="kelantan.html">Kelantan</a>
+                    <a href="terengganu.html" class="active">Terengganu</a>
+                    <a href="pahang.html">Pahang</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Borneo</a>
+                <div class="dropdown-content">
+                    <a href="sabah.html">Sabah</a>
+                    <a href="sarawak.html">Sarawak</a>
+                </div>
+        <li class="contact-btn-container">
+            <a href="contact.html" class="contact-btn">Contact</a>
+        </li>
+
+        </ul>
+    </nav>
+</header>
+
+<div class="state-banner">
+    <h2>Terengganu Darul Iman</h2>
+    <div class="breadcrumb">A coastal state known for its beautiful beaches, traditional crafts, and strong cultural heritage. Its local cuisine, including keropok lekor and nasi dagang, reflects the state’s close connection to the sea and traditional flavors.</div>
+</div>
+
+<div class="search-container">
+    <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" id="searchInput" placeholder="Discover recipes..." onkeyup="searchRecipe()">
+    </div>
+</div>
+
+<main class="recipe-grid" id="recipeGrid">
+    <div id="noResult" style="display: none; grid-column: 1 / -1; text-align: center; padding: 60px 20px;">
+        <i class="fas fa-utensils" style="font-size: 50px; color: #ddd; margin-bottom: 15px;"></i>
+        <p style="color: #7f8c8d; font-size: 18px;">Oops! We couldn’t find that recipe.</p>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://th.bing.com/th/id/R.bdb35fa5c3692f8c5e0abfcfb95ef32f?rik=eMLkr4%2fh%2bX69mQ&riu=http%3a%2f%2f1.bp.blogspot.com%2f-0kk2mOKtboE%2fTsjEhRPBLUI%2fAAAAAAAAAlA%2fSkEy42eI2WM%2fs1600%2fIMG_0029.JPG&ehk=zF3sP7WPiQPd9daPfs%2fdFrYJwdrnecDneARLl%2bDULBk%3d&risl=&pid=ImgRaw&r=0');">
+            <span class="time-tag"><i class="far fa-clock"></i> 90 Mins</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Nasi Dagang</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-utensils"></i> Iconic</span>
+                <span><i class="fas fa-fish"></i> Fish Curry</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Traditional red rice cooked with coconut milk, served with tuna curry (Gulai Ikan Tongkol) and pickled cucumber.</p>
+            <a href="nasidagang.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://tse2.mm.bing.net/th/id/OIP.Apgor2f6JfN2s4E-YE40agHaE_?rs=1&pid=ImgDetMain&o=7&rm=3');">
+            <span class="time-tag"><i class="far fa-clock"></i> 30 Mins</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Keropok Lekor</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-fish"></i> Snack</span>
+                <span><i class="fas fa-pepper-hot"></i> Spicy Sauce</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Authentic fish crackers fried until crispy, best served with a special sweet and spicy dipping sauce.</p>
+            <a href="keropoklekor.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://4.bp.blogspot.com/-54YNV1m80NU/Vnd4uSXdD7I/AAAAAAAAABY/GX1PhA_OB1Y/s1600/6060809961_247b91d935%255B1%255D.jpg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 45 Mins</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Laksa Kuah Merah</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-tint"></i> Red Gravy</span>
+                <span><i class="fas fa-utensils"></i> Unique</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Unlike other versions, Terengganu laksa is uniquely served with a rich, spiced red fish gravy.</p>
+            <a href="laksa.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+<div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://www.discoveryterengganu.com/wp-content/uploads/2024/05/4-1.jpg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 40 Mins</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Satar Ikan</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-fire"></i> Grilled</span>
+                <span><i class="fas fa-leaf"></i> Banana Leaf</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">A succulent blend of mashed fish, grated coconut, and spices, wrapped in banana leaves and grilled to perfection.</p>
+            <a href="satar.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://www.discoveryterengganu.com/wp-content/uploads/2024/09/Roti-Paung-Ajimo.jpg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 2 Hours (Dough)</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Roti Paung</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-bread-slice"></i> Fluffy</span>
+                <span><i class="fas fa-mitten"></i> Freshly Baked</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Small, bite-sized round buns known for being incredibly fluffy and soft, often eaten plain or with margarine.</p>
+            <a href="rotipaung.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://1.bp.blogspot.com/-azyrcRzN6dk/XAfFLchItlI/AAAAAAAApfc/5wRKoFA43L8ZsMNk9ZedRy13JiEZrvrAgCLcBGAs/s1600/sambal%2Bhitam.jpg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 40 Mins</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Nasi Kapit Sambal</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-cube"></i> Nasi Impit</span>
+                <span><i class="fas fa-fish"></i> Fish Sambal</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Compressed rice cubes served with savory dried fish floss (serunding ikan).</p>
+            <a href="nasikapit.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Serumpun Rasa. All rights reserved.</p>
+</footer>
+
+<script src="terengganuscript.js"></script>
+
+</body>
+</html>
+
+
+
+

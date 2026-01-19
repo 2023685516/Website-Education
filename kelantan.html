@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelantan | Serumpun Rasa</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="kelantanstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <h1>Serumpun<span>Rasa</span></h1>
+    </div>
+
+<nav>
+    <ul>
+         <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Selatan</a>
+                <div class="dropdown-content">
+                    <a href="selatanjohor.html">Johor</a>
+                    <a href="selatannegeri.html">Negeri Sembilan</a>
+                    <a href="selatanmelaka.html">Melaka</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Utara</a>
+                <div class="dropdown-content">
+                    <a href="kedah.html">Kedah</a>
+                    <a href="penang.html">Pulau Pinang</a>
+                    <a href="perak.html">Perak</a>
+                </div>
+            </li>
+
+        <li class="dropdown">
+            <a href="#" class="active">Pantai Timur</a>
+            <div class="dropdown-content">
+                <a href="kelantan.html" class="active">Kelantan</a>
+                <a href="terengganu.html">Terengganu</a>
+                <a href="pahang.html">Pahang</a>
+            </div>
+        </li>
+
+        <li class="dropdown">
+            <a href="#">Borneo</a>
+            <div class="dropdown-content">
+                <a href="sabah.html">Sabah</a>
+                <a href="sarawak.html">Sarawak</a>
+            </div>
+        </li>
+
+        <li class="contact-btn-container">
+            <a href="contact.html" class="contact-btn">Contact</a>
+        </li>
+    </ul>
+</nav>
+</header>
+
+<div class="state-banner">
+    <h2>Kelantan Darul Naim</h2>
+    <div class="breadcrumb">A state rich in culture and tradition, known for its unique heritage and authentic local cuisine such as nasi kerabu and traditional kuih.</div>
+</div>
+
+<div class="search-container">
+    <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" id="searchInput" placeholder="Discover recipes..." onkeyup="searchRecipe()">
+    </div>
+</div>
+
+<main class="recipe-grid" id="recipeGrid">
+    <div id="noResult" style="display: none; grid-column: 1 / -1; text-align: center; padding: 60px 20px;">
+        <i class="fas fa-utensils" style="font-size: 50px; color: #ddd; margin-bottom: 15px;"></i>
+        <p style="color: #7f8c8d; font-size: 18px;">Oops! Recipe not found.</p>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://images.deliveryhero.io/image/fd-my/LH/j1rb-hero.jpg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 2 Hours</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Nasi Kerabu</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-utensils"></i> Iconic</span>
+                <span><i class="fas fa-leaf"></i> Healthy</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Blue pea flower rice served with fresh herbs, solok lada (stuffed chili), and budu sauce.</p>
+            <a href="nasikerabu.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://www.kelabmama.com/story_wordpress/wp-content/uploads/2022/09/ayam-percik-kelantan.jpg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 60 Mins</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Ayam Percik</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-fire"></i> Grilled</span>
+                <span><i class="fas fa-star"></i> Popular</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Special grilled chicken coated in a rich, creamy white coconut gravy that is both sweet and savory.</p>
+            <a href="ayampercik.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://img.freepik.com/premium-photo/laksam-malaysian-penang-traditional-food_732689-74.jpg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 60 Mins</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Laksam</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-tint"></i> White Gravy</span>
+                <span><i class="fas fa-utensils"></i> Breakfast</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Steamed rice flour rolls served with a thick, creamy fish-based coconut gravy and fresh herbs.</p>
+            <a href="laksam.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+
+<div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://preview.redd.it/a0bp5cppb5671.jpg?width=800&format=pjpg&auto=webp&s=0c2dbf127b0f973f254625f11bae300f5192f67e');">
+            <span class="time-tag"><i class="far fa-clock"></i> 45 Mins</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Cek Mek Molek</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-seedling"></i> Sweet Potato</span>
+                <span><i class="fas fa-frown-open"></i> Liquid Sugar</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Deep-fried orange sweet potato fritters with a surprise center of melted liquid sugar.</p>
+            <a href="cekmek.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://2.bp.blogspot.com/-899Gpi4gSuY/WLRGAOHU0XI/AAAAAAAAACM/zMzi9bRzKCAhGByl0uVBvfa2UWriP0YgQCLcB/s1600/akok.jpg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 50 Mins</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Kuih Akok</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-egg"></i> Egg Based</span>
+                <span><i class="fas fa-cloud"></i> Soft</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">A traditional dessert rich in eggs and palm sugar, baked until it becomes delightfully wrinkled and soft.</p>
+            <a href="akok.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+
+<div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://cdn.rasa.my/2022/05/242432901_4741491882568734_6586313784340709341_n.jpg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 45 Mins</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Lompat Tikam</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-layer-group"></i> Layered</span>
+                <span><i class="fas fa-ice-cream"></i> Chilled</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">A combination of green and white rice flour puddings, served with red glutinous rice and palm sugar syrup.</p>
+            <a href="lompattikam.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+
+<div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://tse1.mm.bing.net/th/id/OIP.Oa4e2OjjTbOO7IthSAROmwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3');">
+            <span class="time-tag"><i class="far fa-clock"></i> 2 Hours (Smoked)</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Etok Salai</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-smoking"></i> Smoked</span>
+                <span><i class="fas fa-seedling"></i> Spiced</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">River clams marinated with lemongrass, shallots, and ginger, then slowly smoked over a small fire.</p>
+            <a href="etoksalai.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+
+<div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://3.bp.blogspot.com/-epv_kJv8zzg/UJSHWZPvKhI/AAAAAAAAKHg/5BC_iVUMOeQ/s1600/wajik1a.jpg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 60 Mins</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Nasi Manis</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-mortar-pestle"></i> Sticky Rice</span>
+                <span><i class="fas fa-tint"></i> Palm Sugar</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Traditional glutinous rice cooked with authentic palm sugar and coconut milk until glossy and sweet.</p>
+            <a href="nasimanis.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+
+<div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://babe.com.my/wp-content/uploads/2025/04/nasi-tumpang-recipe-layered-rice-parcel-kelantan-1745379956.jpg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 50 Mins</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Nasi Tumpang</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-layer-group"></i> Layered</span>
+                <span><i class="fas fa-box-open"></i> Leaf Art</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Soft rice packed in a cone-shaped banana leaf, layered with fish gravy, eggs, and meat serunding.</p>
+            <a href="nasitumpang.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Serumpun Rasa. All right reserved. | Last updated: 18 January 2026</p>
+</footer>
+
+<script src="kelantan.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+

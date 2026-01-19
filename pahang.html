@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pahang | Serumpun Rasa</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="pahangstyle.css">
+
+
+</head>
+<body>
+<header>
+    <div class="logo">
+        <h1>Serumpun<span>Rasa</span></h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Selatan</a>
+                <div class="dropdown-content">
+                    <a href="selatanjohor.html">Johor</a>
+                    <a href="selatannegeri.html">Negeri Sembilan</a>
+                    <a href="selatanmelaka.html">Melaka</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Utara</a>
+                <div class="dropdown-content">
+                    <a href="kedah.html">Kedah</a>
+                    <a href="penang.html">Pulau Pinang</a>
+                    <a href="perak.html">Perak</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="active">Pantai Timur</a>
+                <div class="dropdown-content">
+                    <a href="kelantan.html">Kelantan</a>
+                    <a href="terengganu.html">Terengganu</a>
+                    <a href="pahang.html"class="active">Pahang</a>
+                </div>
+          <li class="dropdown">
+                <a href="#">Borneo</a>
+                <div class="dropdown-content">
+                    <a href="sabah.html">Sabah</a>
+                    <a href="sarawak.html">Sarawak</a>
+                </div>
+            </li>
+
+        <li class="contact-btn-container">
+            <a href="contact.html" class="contact-btn">Contact</a>
+        </li>
+
+        </ul>
+    </nav>
+</header>
+
+<div class="state-banner">
+    <h2>Pahang Darul Makmur</h2>
+    <div class="breadcrumb">Known for its natural landscapes and rich traditional culture.</div>
+</div>
+
+<div class="search-container">
+    <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" id="searchInput" placeholder="Search Pahang Recipe..." onkeyup="searchRecipe()">
+    </div>
+</div>
+
+<main class="recipe-grid" id="recipeGrid">
+    <div id="noResult" style="display: none; grid-column: 1 / -1; text-align: center; padding: 60px 20px;">
+        <i class="fas fa-utensils" style="font-size: 50px; color: #ddd; margin-bottom: 15px;"></i>
+        <p style="color: #7f8c8d; font-size: 18px;">Oops! Recipe not found.</p>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://myweekendplan.asia/wp-content/uploads/2022/01/Gulai-Tempoyak-Ikan-Patin-2.jpg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 45 Mins</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Gulai Patin Tempoyak</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-fish"></i> River Fish</span>
+                <span><i class="fas fa-star"></i> Temerloh</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Pahang's most iconic dish featuring fresh silver catfish cooked in a rich, spicy fermented durian gravy.</p>
+            <a href="patin.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://4.bp.blogspot.com/-bEWuPTAlyVE/V0-NZsgrYlI/AAAAAAAAVVc/IZWtRVBmJqUzmbDXoLCHO33qLun83ci8QCLcB/s1600/sambal-hitam-pahang.jpg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 4 Hours</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Sambal Hitam</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-pepper-hot"></i> Spicy</span>
+                <span><i class="fas fa-seedling"></i> Averrhoa Bilimbi</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">A unique dark sambal slow-cooked for hours until black, using sun-dried bilimbi for a tangy kick.</p>
+            <a href="sambalhitam.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://2.bp.blogspot.com/-qg92wRjbdPI/WAxg5fUzH4I/AAAAAAAALMM/axIYkl-T76Iwuw2axPmK0_zsUcuB3aZOQCLcB/s1600/IMG-20161023-WA0028.jpg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 40 Mins</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Sambal Bunga Kantan</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-spa"></i> Aromatic</span>
+                <span><i class="fas fa-utensils"></i> Appetizer</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">A fresh pounded sambal mixed with finely sliced torch ginger flower for a fragrant and unique floral taste.</p>
+            <a href="kantan.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://tse2.mm.bing.net/th/id/OIP.5YIDYjsSa3-ROw3rLBh0UwHaE7?rs=1&pid=ImgDetMain&o=7&rm=3');">
+            <span class="time-tag"><i class="far fa-clock"></i> 60 Mins</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Puding Diraja</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-crown"></i> Pekan Origin</span>
+                <span><i class="fas fa-egg"></i> Royal Dessert</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">A majestic royal dessert combining sweet bananas, golden egg net (jala emas), prunes, and crunchy cashews.</p>
+            <a href="puding.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <p>© 2026 Serumpun Rasa. All rights reserved. | Last updated: 18 January 2026</p>
+</footer>
+
+<script src="pahangscript.js"></script>
+
+</body>
+</html>
+
+
+
