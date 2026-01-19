@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gulai Ketam | Serumpun Rasa</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="gulaiketam.css">
+</head>
+<body>
+
+<header>
+    <div class="logo"><h1>Serumpun<span>Rasa</span></h1></div>
+    <a href="kedah.html" class="back-link">
+        <i class="fas fa-chevron-left"></i> Back
+    </a>
+</header>
+
+<section class="recipe-header">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQQrj2_y1EJYrrOmURPrvfFi5WtOmoMIBnyQ&s" alt="Crab Curry" class="recipe-image-big">
+    <div class="recipe-meta">
+        <span class="category-tag">Kedah Heritage Recipes</span>
+        <h2>Gulai Ketam</h2>
+        <p>A rich curry infused with aromatic spices and the natural sweetness of fresh crabs, perfected with the "Tumis Darat" technique (final tempering) to awaken the senses.</p>
+        
+        <div class="stats-bar">
+            <div class="stat-item"><i class="fas fa-clock"></i><span>45 Mins</span></div>
+            <div class="stat-item"><i class="fas fa-fire"></i><span>Medium</span></div>
+            <div class="stat-item"><i class="fas fa-user-friends"></i><span>4 Servings</span></div>
+        </div>
+
+        <button onclick="printRecipe()" class="btn-print">
+            <i class="fas fa-print"></i> Print Recipe
+        </button>
+    </div>
+</section>
+
+<div class="recipe-container">
+    <aside class="ingredients-side">
+        <div class="ingredients-card">
+            <h3>Main Ingredients</h3>
+            <div class="ingredient-item"><input type="checkbox"><span>5 Crabs (cleaned & halved)</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>2 packets Crab Curry Powder</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>1/2 Pineapple (sliced)</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>1/2 bowl Thick Coconut Milk</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>Tamarind Juice (to taste)</span></div>
+        </div>
+
+        <div class="ingredients-card">
+            <h3>Tempering (Tumis Darat)</h3>
+            <div class="ingredient-item"><input type="checkbox"><span>1 Red Onion (sliced)</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>3 cloves Garlic (sliced)</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>1 inch Ginger (julienned)</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>3 sprigs Curry Leaves</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>1 tsp Mixed Halba (Spices)</span></div>
+        </div>
+    </aside>
+
+    <main class="steps-side">
+        <a href="https://youtu.be/2dSHp95y8Lk" target="_blank" class="video-box">
+            <div class="play-btn"><i class="fas fa-play-circle"></i></div>
+            <h4>Watch Full Tutorial</h4>
+            <p>Northern Style Crab Curry Tutorial</p>
+        </a>
+
+        <div class="steps-container">
+            <h3>Preparation Steps</h3>
+            
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-text">
+                    <strong>Prepare Curry Paste:</strong> Mix the curry powder with a little water to form a thick paste. Blend the onions, garlic, and ginger until smooth.
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-text">
+                    <strong>Simmer Curry:</strong> Combine the blended aromatics, curry paste, crabs, and a bit of water in a pot. Cover and simmer for 10 minutes until the spices are well-cooked.
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-text">
+                    <strong>Flavoring:</strong> Add the pineapple slices, coconut milk, sugar, salt, and tamarind juice. Bring to a gentle boil.
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <div class="step-text">
+                    <strong>Tempering (Tumis Darat):</strong> In a separate small pan, fry the sliced onions, garlic, ginger, curry leaves, and halba until golden and fragrant. Pour the hot oil and fried ingredients directly into the curry pot. Ready to serve!
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<footer>
+    <p>&copy; 2026 Serumpun Rasa. All rights reserved. | Last updated: 18 January 2026</p>
+</footer>
+
+<script src="gulaiketam.js"></script>
+
+</body>
+</html>
