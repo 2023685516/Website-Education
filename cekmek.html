@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Mek Molek | Serumpun Rasa</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cekmekstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+
+    <header>
+        <div class="logo"><h1>Serumpun<span>Rasa</span></h1></div>
+        <a href="kelantan.html" style="text-decoration: none; color: var(--primary-color); font-weight: 600;">
+            <i class="fas fa-chevron-left"></i> Back
+        </a>
+    </header>
+
+    <section class="recipe-header">
+        <img src="https://preview.redd.it/a0bp5cppb5671.jpg?width=800&format=pjpg&auto=webp&s=0c2dbf127b0f973f254625f11bae300f5192f67e" alt="Cek Mek Molek" class="recipe-image-big">
+        <div class="recipe-meta">
+            <span style="color: var(--primary-color); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Kelantan Heritage Recipes</span>
+            <h2>Cek Mek Molek</h2>
+            <p>A classic sweet potato fritter with a surprise molten sugar center. Literally translated as "Lovely Little Lady," this kuih is crispy on the outside and syrupy on the inside.</p>
+            
+            <div class="stats-bar">
+                <div class="stat-item"><i class="fas fa-clock"></i><span>45 Mins</span></div>
+                <div class="stat-item"><i class="fas fa-signal"></i><span>Easy</span></div>
+                <div class="stat-item"><i class="fas fa-utensils"></i><span>15 Pieces</span></div>
+            </div>
+
+            <button onclick="window.print()" style="background: var(--primary-color); color: white; border: none; padding: 12px 25px; border-radius: 8px; font-weight: 600; cursor: pointer;">
+                <i class="fas fa-print"></i> Print Recipe
+            </button>
+        </div>
+    </section>
+
+    <div class="recipe-container">
+        <aside class="ingredients-side">
+            <div class="ingredients-card">
+                <h3>Ingredients</h3>
+                <div class="ingredient-item"><input type="checkbox"><span>500g–700g Ubi keledek (oren)</span></div>
+                <div class="ingredient-item"><input type="checkbox"><span>1 cawan Tepung gandum</span></div>
+                <div class="ingredient-item"><input type="checkbox"><span>Sedikit garam</span></div>
+                
+                <h4 style="margin: 20px 0 10px; color: var(--primary-color);">Inti & Gorengan:</h4>
+                <div class="ingredient-item"><input type="checkbox"><span>Gula pasir (untuk inti)</span></div>
+                <div class="ingredient-item"><input type="checkbox"><span>Minyak masak (untuk menggoreng)</span></div>
+            </div>
+        </aside>
+
+        <main class="steps-side">
+            <div class="video-wrapper">
+                <video id="myVideo" controls muted loop>
+                    <source src="cekmek.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+                <div class="video-overlay" id="videoOverlay">
+                    <i class="fas fa-play-circle play-icon"></i>
+                    <p style="font-weight: 600; letter-spacing: 1px;">WATCH: HOW TO SHAPE CEK MEK</p>
+                </div>
+            </div>
+
+            <div class="steps-container">
+                <h3>Step-by-Step Instructions</h3>
+                
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-text">
+                        <strong>Prepare the Sweet Potato:</strong> Peel, dice, and boil the sweet potatoes until tender. Drain the water and mash them thoroughly with a pinch of salt while still hot until smooth.
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-text">
+                        <strong>Make the Dough:</strong> Gradually add wheat flour to the mashed sweet potato. Knead gently until you get a soft, non-sticky dough. Avoid adding too much flour to keep the texture soft.
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-text">
+                        <strong>Shape & Fill:</strong> Take a small portion of dough (~size of a ping pong ball), flatten it, and place 1 teaspoon of sugar in the center. Carefully seal and shape it into a smooth, elongated oval.
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-text">
+                        <strong>Deep Fry:</strong> Heat oil over medium heat. Fry the kuih until golden brown and crispy. Be careful when taking the first bite as the melted sugar inside is very hot!
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Serumpun Rasa. All rights reserved. | Last updated: 18 January 2026</p>
+    </footer>
+
+<script src="cekmekscript.js"></script>
+
+</body>
+</html>
