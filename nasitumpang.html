@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasi Tumpang Recipe | Serumpun Rasa</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="nasitumpangstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+
+<header>
+    <div class="logo"><h1>Serumpun<span>Rasa</span></h1></div>
+    <a href="kelantan.html" style="text-decoration: none; color: var(--primary-color); font-weight: 600;">
+        <i class="fas fa-chevron-left"></i> Back
+    </a>
+</header>
+
+<section class="recipe-header">
+    <img src="https://babe.com.my/wp-content/uploads/2025/04/nasi-tumpang-recipe-layered-rice-parcel-kelantan-1745379956.jpg" alt="Nasi Tumpang" class="recipe-image-big">
+    <div class="recipe-meta">
+        <span style="color: var(--primary-color); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Kelantan Heritage Recipes</span>
+        <h2>Nasi Tumpang</h2>
+        <p>An iconic Kelantanese breakfast "to-go". Soft, layered rice packed inside a banana leaf cone, filled with aromatic fish gulai, serunding, and fluffy omelette.</p>
+        
+        <div class="stats-bar">
+            <div class="stat-item"><i class="fas fa-clock"></i><span>50 Mins</span></div>
+            <div class="stat-item"><i class="fas fa-signal"></i><span>Medium</span></div>
+            <div class="stat-item"><i class="fas fa-leaf"></i><span>6 Packet</span></div>
+        </div>
+
+        <button id="printBtn">
+            <i class="fas fa-print"></i> Print Recipe
+        </button>
+    </div>
+</section>
+
+<div class="recipe-container">
+    <aside class="ingredients-side">
+        <div class="ingredients-card">
+            <h3>Ingredients</h3>
+            
+            <h4 style="color: var(--primary-color); margin-bottom: 10px;">Nasi:</h4>
+            <div class="ingredient-item"><input type="checkbox"><span>500g beras (dimasak lembik)</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>1000ml air</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>Daun pisang secukupnya</span></div>
+
+            <h4 style="color: var(--primary-color); margin: 15px 0 10px;">Gulai Ikan:</h4>
+            <div class="ingredient-item"><input type="checkbox"><span>200g ikan kembung/tongkol</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>500ml santan pekat</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>Kunyit, lengkuas, bawang merah & cili kering (dikisar)</span></div>
+
+            <h4 style="color: var(--primary-color); margin: 15px 0 10px;">Inti Telur & Tambahan:</h4>
+            <div class="ingredient-item"><input type="checkbox"><span>5 biji telur (dibuat dadar)</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>Bawang besar & daun bawang</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>Serunding ikan/daging</span></div>
+        </div>
+    </aside>
+
+    <main class="steps-side">
+        <div class="steps-container">
+            <h3>Step-by-Step Instructions</h3>
+            
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-text">
+                    <strong>Cook the Soft Rice:</strong> Rinse the rice and cook it with a higher water ratio (1:2) until it reaches a very soft, mashed-like consistency (similar to nasi himpit). Allow it to cool slightly so it's easier to handle.
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-text">
+                    <strong>Prepare the Gulai Ikan:</strong> Simmer the ground spices with coconut milk in a pot. Once fragrant, add the fish and cook until the gravy thickens into a rich, concentrated curry. Season with salt and sugar.
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-text">
+                    <strong>Make the Omelette:</strong> Whisk eggs with onions and chilies. Fry the omelette until golden and set. Slice it into small pieces or strips that can be easily layered.
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <div class="step-text">
+                    <strong>Layering (The Tumpang Part):</strong> Create a cone shape using a softened banana leaf. Fill the bottom with a layer of rice and press down. Add a layer of serunding, followed by more rice, then omelette, and finally the gulai.
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">5</div>
+                <div class="step-text">
+                    <strong>Seal and Serve:</strong> Finish with a final layer of rice to seal the fillings. Fold the top of the banana leaf and secure it with a toothpick. Serve the parcels as a complete, portable meal.
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<footer>
+    <p>&copy; 2026 Serumpun Rasa. All rights reserved.</p>
+</footer>
+
+<script>
+    document.getElementById('printBtn').addEventListener('click', function() {
+        window.print();
+    });
+</script>
+
+</body>
+
+</html>
