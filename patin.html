@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gulai Patin Tempoyak | Serumpun Rasa</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="patinstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+
+<header>
+    <div class="logo"><h1>Serumpun<span>Rasa</span></h1></div>
+    <a href="pahang.html" style="text-decoration: none; color: var(--primary-color); font-weight: 600;">
+        <i class="fas fa-chevron-left"></i> Back
+    </a>
+</header>
+
+<section class="recipe-header">
+    <img src="https://myweekendplan.asia/wp-content/uploads/2022/01/Gulai-Tempoyak-Ikan-Patin-2.jpg" alt="Gulai Patin Tempoyak" class="recipe-image-big">
+    <div class="recipe-meta">
+        <span style="color: var(--primary-color); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Pahang Heritage Recipes</span>
+        <h2>Gulai Patin Tempoyak</h2>
+        <p>A traditional Malaysian curry where succulent Patin fish (Silver Catfish) is braised in a spicy, tangy gravy thickened with Tempoyak (fermented durian). A bold and soul-warming dish.</p>
+        
+        <div class="stats-bar">
+            <div class="stat-item"><i class="fas fa-clock"></i><span>45 Mins</span></div>
+            <div class="stat-item"><i class="fas fa-signal"></i><span>Medium</span></div>
+            <div class="stat-item"><i class="fas fa-user-friends"></i><span>4 Pax</span></div>
+        </div>
+
+        <button id="printBtn">
+            <i class="fas fa-print"></i> Print Recipe
+        </button>
+    </div>
+</section>
+
+<div class="recipe-container">
+    <aside class="ingredients-side">
+        <div class="ingredients-card">
+            <h3>Ingredients</h3>
+            
+            <h4 style="color: var(--accent-color); margin-bottom: 10px;">Bahan Utama:</h4>
+            <div class="ingredient-item"><input type="checkbox"><span>2–4 keping ikan patin</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>200–300g tempoyak</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>900ml–1L air</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>3–5 biji cili padi (ikut pedas)</span></div>
+
+            <h4 style="color: var(--accent-color); margin: 20px 0 10px;">Bahan Kisar:</h4>
+            <div class="ingredient-item"><input type="checkbox"><span>5–7 ulas bawang merah</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>3–4 ulas bawang putih</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>1–2 inci kunyit hidup</span></div>
+
+            <h4 style="color: var(--accent-color); margin: 20px 0 10px;">Aromatik & Perasa:</h4>
+            <div class="ingredient-item"><input type="checkbox"><span>2–3 batang serai (diketuk)</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>1–2 keping asam keping</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>1 genggam daun kesum</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>Garam & Gula secukup rasa</span></div>
+        </div>
+    </aside>
+
+    <main class="steps-side">
+        <div class="steps-container">
+            <h3>Step-by-Step Instructions</h3>
+            
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-text">
+                    <strong>Make the Spice Base:</strong> Blend the shallots, garlic, and turmeric into a smooth paste. Add this paste to a medium pot and sauté for 2-3 minutes until fragrant.
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-text">
+                    <strong>Add Tempoyak and Liquid:</strong> Stir the tempoyak into the pot with the spice paste. Pour in the water and bring it to a gentle simmer. Add the bruised lemongrass and asam keping.
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-text">
+                    <strong>Season:</strong> Let the curry base simmer for a few minutes to allow the flavors to meld. Season with salt and a touch of sugar to balance the tanginess of the fermented durian.
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <div class="step-text">
+                    <strong>Cook the Fish:</strong> Gently lower the Patin fish pieces into the gravy. Reduce the heat and simmer for 10-15 minutes until the fish is tender and opaque.
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">5</div>
+                <div class="step-text">
+                    <strong>Final Aroma:</strong> Toss in the torn daun kesum (Vietnamese coriander) during the last few minutes of cooking for that signature fragrance. Serve hot with white rice.
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<footer>
+    <p>&copy;2026 Serumpun Rasa. All rights reserved. | Last updated: 18 January 2026</p>
+</footer>
+
+<script>
+    document.getElementById('printBtn').addEventListener('click', function() {
+        window.print();
+    });
+</script>
+
+</body>
+</html>
