@@ -1,4 +1,4 @@
-<style>
+
         :root {
             --primary-color: #d35400;
             --secondary-color: #2c3e50;
@@ -263,4 +263,3 @@
         }
 
         footer { background: var(--secondary-color); color: white; padding: 15px 0; text-align: center; margin-top: 40px; }
-    </style>
