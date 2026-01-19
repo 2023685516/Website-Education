@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ms">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sabah | Serumpun Rasa</title>
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sabahstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <h1>Serumpun<span>Rasa</span></h1>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Selatan</a>
+                <div class="dropdown-content">
+                    <a href="selatanjohor.html">Johor</a>
+                    <a href="selatannegeri.html">Negeri Sembilan</a>
+                    <a href="selatanmelaka.html">Melaka</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Utara</a>
+                <div class="dropdown-content">
+                    <a href="kedah.html">Kedah</a>
+                    <a href="penang.html">Pulau Pinang</a>
+                    <a href="perak.html">Perak</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Pantai Timur</a>
+                <div class="dropdown-content">
+                    <a href="kelantan.html">Kelantan</a>
+                    <a href="terengganu.html">Terengganu</a>
+                    <a href="pahang.html">Pahang</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="active">Borneo</a>
+                <div class="dropdown-content">
+                    <a href="sabah.html" class="active">Sabah</a>
+                    <a href="sarawak.html">Sarawak</a>
+                </div>
+            </li>
+            <li class="contact-btn-container">
+                <a href="contact.html" class="contact-btn">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="state-banner">
+    <h2>The Land below the Wind</h2>
+    <div class="breadcrumb">Discover the unique taste of Sabah, where heritage recipes meet the natural richness of Borneo.</div>
+</div>
+
+<div class="search-container">
+    <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" id="searchInput" placeholder="Discover recipes..." onkeyup="searchRecipe()">
+    </div>
+</div>
+
+<main class="recipe-grid" id="recipeGrid">
+    
+    <div id="noResult">
+        <i class="fas fa-utensils"></i>
+        <p>Oops! We couldn’t find that recipe.</p>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://t3.ftcdn.net/jpg/03/69/40/10/360_F_369401075_9wjEybFlZfrPsyfuDWCoA78B6Ix57zg6.jpg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 15 Minutes</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Ambuyat</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-stopwatch"></i> Easy-prep</span>
+                <span><i class="fas fa-leaf"></i> Tradisional</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">A chewy and light Sabahan specialty best enjoyed with spicy or savory sauces.</p>
+            <a href="ambuyat.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://jackiem.com.au/wpinstall/wp-content/uploads/2022/02/mee-tuaran-halal-recipe.jpg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 50 Minutes</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Mee Tuaran (Non-Pork Version)</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-star"></i> Popular</span>
+                <span><i class="fas fa-utensils"></i> Unique Flavor</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">A traditional noodle dish from Tuaran Sabah with springy noodles fried until crispy.</p>
+            <a href="meetua.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://i.redd.it/8y5ckfn601271.jpg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 40 Minutes</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Pinasakan</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-lemon"></i> Sour</span>
+                <span><i class="fas fa-leaf"></i> Authentic</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">A traditional Kadazandusun preserved fish dish from Sabah made by cooking fish with sour fruits to keep it fresh for long journeys.</p>
+            <a href="pinasakan.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://i.redd.it/eiv4ubn1jbw71.jpg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 35 Minutes</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Linopot</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-utensils"></i> Rice Dish</span>
+                <span><i class="fas fa-leaf"></i> Natural</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">A dish of rice neatly wrapped in a large leaf for convenient takeaway. Its name means ‘packing’ in the Dusun language.</p>
+            <a href="lunopot.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://www.iloveborneo.my/wp-content/uploads/2025/03/steamedglutinousricecake-1024x966-1.jpg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 40 Minutes</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Hinompuka</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-candy-cane"></i> Sweet</span>
+                <span><i class="fas fa-circle"></i> Chewy</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Sweet and fragrant steamed rice cake from Sabah made with coconut milk, palm sugar, and banana leaves.</p>
+            <a href="hinompuka.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://image.idntimes.com/post/20230914/inshot-20230915-073713398-e19c76cf1b28908665001625bb727ae6-a7470248933afa97c80c2e8329fcd984.jpg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 1 Hours</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Barobbo</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-utensils"></i> Family Dish</span>
+                <span><i class="fas fa-candy-cane"></i> Sweet</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Sabahan corn porridge made with sweet corn and cooked for family gatherings and festive occasions.</p>
+            <a href="barobbo.html" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2026 Serumpun Rasa. All right reserved. | Last updated: 18 January 2026</p>
+</footer>
+
+<script>
+    function searchRecipe() {
+        let input = document.getElementById('searchInput').value.toLowerCase();
+        
+        let cards = document.getElementsByClassName('recipe-card');
+        let noResult = document.getElementById('noResult');
+
+        let hasResults = false;
+
+        for (let i = 0; i < cards.length; i++) {
+            let title = cards[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
+            let description = cards[i].getElementsByTagName('p')[0].innerText.toLowerCase();
+
+            if (title.includes(input) || description.includes(input)) {
+                cards[i].style.display = "block"; 
+                hasResults = true;
+            } else {
+                cards[i].style.display = "none"; 
+            }
+        }
+
+        if (hasResults) {
+            noResult.style.display = "none";
+        } else {
+            noResult.style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
