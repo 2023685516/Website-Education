@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keropok Lekor | Serumpun Rasa</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="keropoklekorstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+
+<header>
+    <div class="logo"><h1>Serumpun<span>Rasa</span></h1></div>
+    <a href="terengganu.html" style="text-decoration: none; color: var(--secondary-color); font-weight: 600;">
+        <i class="fas fa-chevron-left"></i> Back
+    </a>
+</header>
+
+<section class="recipe-header">
+    <img src="https://tse2.mm.bing.net/th/id/OIP.Apgor2f6JfN2s4E-YE40agHaE_?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Keropok Lekor" class="recipe-image-big">
+    <div class="recipe-meta">
+        <span style="color: var(--secondary-color); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Terengganu Heritage Recipes</span>
+        <h2>Keropok Lekor</h2>
+        <p>A classic Malaysian fish sausage made with fresh fish and sago flour. Whether boiled for a chewy texture or fried for a crispy golden finish, it is best enjoyed with spicy sweet chili sauce.</p>
+        
+        <div class="stats-bar">
+            <div class="stat-item"><i class="fas fa-clock"></i><span>30 Mins</span></div>
+            <div class="stat-item"><i class="fas fa-signal"></i><span>Medium</span></div>
+            <div class="stat-item"><i class="fas fa-fish"></i><span>10-12 Pcs</span></div>
+        </div>
+
+        <button id="printBtn">
+            <i class="fas fa-print"></i> Print Recipe
+        </button>
+    </div>
+</section>
+
+<div class="recipe-container">
+    <aside class="ingredients-side">
+        <div class="ingredients-card">
+            <h3>Ingredients</h3>
+            
+            <div class="ingredient-item"><input type="checkbox"><span>1 kg isi ikan (kembung/selayang)</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>185g-500g tepung sagu (ikut tekstur)</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>Garam secukup rasa (1-2 sudu teh)</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>1 sudu teh baking powder (pilihan)</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>50g ketul ais (untuk uli)</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>Air & minyak masak</span></div>
+        </div>
+    </aside>
+
+    <main class="steps-side">
+        <div class="steps-container">
+            <h3>Step-by-Step Instructions</h3>
+            
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-text">
+                    <strong>Prepare the Fish:</strong> Clean and debone the fish. Remove the skin and mince or blend the fillets until they form a smooth paste.
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-text">
+                    <strong>Make the Dough:</strong> In a large bowl, combine the minced fish with salt and baking powder. Gradually add sago flour and knead. Add ice cubes while mixing to keep the dough firm and manageable.
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-text">
+                    <strong>Shape the Lekor:</strong> Dust your work surface with extra sago flour. Roll portions of the dough into long cylindrical sticks (about 2cm in diameter).
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <div class="step-text">
+                    <strong>Cook the Lekor:</strong> Bring a large pot of water to a boil and drop the sticks in. Once they float, they are cooked. For the crispy version, slice the boiled lekor and deep-fry until golden brown.
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">5</div>
+                <div class="step-text">
+                    <strong>Serve:</strong> Serve hot with a side of spicy sweet chili sauce. Perfect as an afternoon snack or appetizer!
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<footer>
+    <p>&copy; 2026 Serumpun Rasa. All rights reserved. | Last updated: 18 January 2026</p>
+</footer>
+
+<script>
+    document.getElementById('printBtn').addEventListener('click', function() {
+        window.print();
+    });
+</script>
+
+</body>
+</html>
