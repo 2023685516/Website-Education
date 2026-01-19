@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puding Diraja | Serumpun Rasa</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="pudingstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+
+<header>
+    <div class="logo"><h1>Serumpun<span>Rasa</span></h1></div>
+    <a href="pahang.html" style="text-decoration: none; color: var(--primary-color); font-weight: 600;">
+        <i class="fas fa-chevron-left"></i> Back
+    </a>
+</header>
+
+<section class="recipe-header">
+    <img src="https://tse2.mm.bing.net/th/id/OIP.5YIDYjsSa3-ROw3rLBh0UwHaE7?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Puding Diraja" class="recipe-image-big">
+    <div class="recipe-meta">
+        <span style="color: var(--primary-color); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Pahang Heritage Recipes</span>
+        <h2>Puding Diraja (Royal Pudding)</h2>
+        <p>A classic Malay dessert from Pekan, Pahang. It features golden bananas, delicate "Jala Emas" (golden threads), and a rich custard sauce, garnished with prunes, cherries, and cashew nuts.</p>
+        
+        <div class="stats-bar">
+            <div class="stat-item"><i class="fas fa-clock"></i><span>60 Mins</span></div>
+            <div class="stat-item"><i class="fas fa-signal"></i><span>Hard</span></div>
+            <div class="stat-item"><i class="fas fa-crown"></i><span>Pahang Heritage</span></div>
+        </div>
+
+        <button id="printBtn">
+            <i class="fas fa-print"></i> Print Recipe
+        </button>
+    </div>
+</section>
+
+<div class="recipe-container">
+    <aside class="ingredients-side">
+        <div class="ingredients-card">
+            <h3>Ingredients</h3>
+            
+            <h4 style="color: var(--accent-color); margin-bottom: 10px;">Bahan Pisang:</h4>
+            <div class="ingredient-item"><input type="checkbox"><span>10–12 biji pisang lemak manis</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>Minyak untuk menggoreng</span></div>
+
+            <h4 style="color: var(--accent-color); margin: 20px 0 10px;">Bahan Jala Emas:</h4>
+            <div class="ingredient-item"><input type="checkbox"><span>5–7 biji kuning telur</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>1–2 cawan gula pasir</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>2–3 cawan air</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>1 helai daun pandan</span></div>
+
+            <h4 style="color: var(--accent-color); margin: 20px 0 10px;">Sos Kastard:</h4>
+            <div class="ingredient-item"><input type="checkbox"><span>1 tin susu cair</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>2–3 biji kuning telur</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>125–200g gula</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>1 sudu tepung kastard</span></div>
+
+            <h4 style="color: var(--accent-color); margin: 20px 0 10px;">Hiasan:</h4>
+            <div class="ingredient-item"><input type="checkbox"><span>Prune, Ceri & Kacang Gajus</span></div>
+        </div>
+    </aside>
+
+    <main class="steps-side">
+        <div class="steps-container">
+            <h3>Step-by-Step Instructions</h3>
+            
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-text">
+                    <strong>Prepare the Bananas:</strong> Fry the bananas whole in hot oil until golden brown. Drain and set aside.
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-text">
+                    <strong>Make Jala Emas:</strong> Boil water, sugar, and pandan leaf to create a syrup. Whisk egg yolks lightly and pour them through a funnel (or jala mould) into the boiling syrup in a circular motion. Once cooked, lift and drain.
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-text">
+                    <strong>Cook the Custard Sauce:</strong> Whisk together evaporated milk, egg yolks, custard flour, sugar, and vanilla. Cook over low heat (or double boiler) until the sauce thickens and becomes smooth.
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <div class="step-text">
+                    <strong>Assembly:</strong> Arrange the fried bananas in a serving dish. Top with a layer of Jala Emas, then sprinkle prunes, cherries, and toasted cashews.
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">5</div>
+                <div class="step-text">
+                    <strong>Serve Chilled:</strong> Pour the custard sauce over the ingredients. Chill in the refrigerator before serving for the best taste.
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<footer>
+    <p>&copy; 2026 Serumpun Rasa. All rights reserved. | Last updated: 18 January 2026</p>
+</footer>
+
+<script>
+    document.getElementById('printBtn').addEventListener('click', function() {
+        window.print();
+    });
+</script>
+
+</body>
+
+</html>
