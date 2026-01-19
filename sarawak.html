@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ms">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarawak | Serumpun Rasa</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sarawakstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <h1>Serumpun<span>Rasa</span></h1>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Selatan</a>
+                <div class="dropdown-content">
+                    <a href="selatanjohor.html">Johor</a>
+                    <a href="selatannegeri.html">Negeri Sembilan</a>
+                    <a href="selatanmelaka.html">Melaka</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Utara</a>
+                <div class="dropdown-content">
+                    <a href="kedah.html">Kedah</a>
+                    <a href="penang.html">Pulau Pinang</a>
+                    <a href="perak.html">Perak</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Pantai Timur</a>
+                <div class="dropdown-content">
+                    <a href="kelantan.html">Kelantan</a>
+                    <a href="terengganu.html">Terengganu</a>
+                    <a href="pahang.html">Pahang</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="active">Borneo</a>
+                <div class="dropdown-content">
+                    <a href="sabah.html">Sabah</a>
+                    <a href="sarawak.html" class="active">Sarawak</a>
+                </div>
+            </li>
+            <li class="contact-btn-container">
+                <a href="contact.html" class="contact-btn">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="state-banner">
+    <h2>The Land of the Hornbills</h2>
+    <div class="breadcrumb">Experience the flavors of Sarawak where cultural heritage blends with the bounty of Borneo’s rainforests.</div>
+</div>
+
+<div class="search-container">
+    <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" id="searchInput" placeholder="Discover recipes..." onkeyup="searchRecipe()">
+    </div>
+</div>
+
+<main class="recipe-grid" id="recipeGrid">
+    
+    <div id="noResult">
+        <i class="fas fa-utensils"></i>
+        <p>Oops! We couldn’t find that recipe.</p>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://www.lotusfoods.com/cdn/shop/files/Sarawak_Laksa_Version_C_square-600x600-bc87582_800x.jpg?v=1683896434');">
+            <span class="time-tag"><i class="far fa-clock"></i> 45 Minutes</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Laksa Sarawak</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-utensils"></i> Comfort Food</span>
+                <span><i class="fas fa-fire"></i> Spicy</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Spicy and savory Sarawak laksa with noodles seafood and a fragrant coconut-based soup.</p>
+            <a href="laksawak" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://www.curiouscuisiniere.com/wp-content/uploads/2018/09/kolomee4.1.jpg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 60 Minutes</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Mee Kolok</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-star"></i> Popular</span>
+                <span><i class="fas fa-utensils"></i> Unique Flavor</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Tender noodles from Sarawak served with flavorful soy sauce fresh toppings and a hint of aromatics.</p>
+            <a href="meekolok" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://shopee.com.my/blog/wp-content/uploads/2021/05/Sarawak-Tomato-Mee-min.jpg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 25 Minutes</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Mee Tomato</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-stopwatch"></i> Quick Meal</span>
+                <span><i class="fas fa-leaf"></i> Authentic</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Stir-fried noodles in a savory tomato and oyster sauce, with chicken, vegetables, and optional seafood, flavored with garlic, shallots, and ginger.</p>
+            <a href="meetomat" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://alchetron.com/cdn/manok-pansoh-f6918545-cbaa-4537-92d9-b38f8e37c0d-resize-750.jpeg');">
+            <span class="time-tag"><i class="far fa-clock"></i> 60 Minutes</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Manok Pansoh</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-fire"></i> Smoky Flavor</span>
+                <span><i class="fas fa-leaf"></i> Aromatic</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Tender chicken slow-cooked in bamboo with local herbs and spices for a fragrant smoky dish.</p>
+            <a href="manok" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS41NRE26BGeL5nuyeuRCLSViB_Sg03O17_9g&s');">
+            <span class="time-tag"><i class="far fa-clock"></i> 60 Minutes</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Kuih Celorot</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-candy-cane"></i> Sweet</span>
+                <span><i class="fas fa-circle"></i> Chewy</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">A traditional Sarawak snack wrapped in nipah leaves with a soft jelly-like brown filling.</p>
+            <a href="kuihcelo" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+    <div class="recipe-card">
+        <div class="recipe-img" style="background-image: url('https://images-je.jomexplore.io/wp-content/uploads/2024/06/bb2dfc60.jpg?auto=format&w=1053');">
+            <span class="time-tag"><i class="far fa-clock"></i> 2 Hours</span>
+        </div>
+        <div class="recipe-content">
+            <h3>Kek Lapis Sarawak</h3>
+            <div class="recipe-info">
+                <span><i class="fas fa-utensils"></i> Family Dish</span>
+                <span><i class="fas fa-candy-cane"></i> Sweet</span>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Moist and flavorful layered cake from Sarawak loved for its striking colors and rich taste.</p>
+            <a href="keklapis" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2026 Serumpun Rasa. All right reserved. | Last updated: 18 January 2026</p>
+</footer>
+
+<script>
+    function searchRecipe() {
+        let input = document.getElementById('searchInput').value.toLowerCase();
+        
+        let cards = document.getElementsByClassName('recipe-card');
+        let noResult = document.getElementById('noResult');
+        
+        let hasResults = false;
+
+        for (let i = 0; i < cards.length; i++) {
+            let title = cards[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
+            let description = cards[i].getElementsByTagName('p')[0].innerText.toLowerCase();
+
+            if (title.includes(input) || description.includes(input)) {
+                cards[i].style.display = "block"; 
+                hasResults = true;
+            } else {
+                cards[i].style.display = "none"; 
+            }
+        }
+        
+        if (hasResults) {
+            noResult.style.display = "none";
+        } else {
+            noResult.style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>
+
+
+
