@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penang Asam Laksa | Serumpun Rasa</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="asamlaksa.css">
+</head>
+<body>
+
+<header>
+    <div class="logo"><h1>Serumpun<span>Rasa</span></h1></div>
+    <a href="penang.html" class="back-link">
+        <i class="fas fa-chevron-left"></i> Back
+    </a>
+</header>
+
+<section class="recipe-header">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiCPU_3onDTF4O7mth4UMdDfYPB1Ztm1I7LQ&s" alt="Penang Asam Laksa" class="recipe-image-big">
+    <div class="recipe-meta">
+        <span class="category-tag">Penang Heritage Recipes</span>
+        <h2>Penang Asam Laksa</h2>
+        <p>A sour and spicy fish-based noodle soup. The soul of this dish is the thick broth made from mackerel, torch ginger flower, and shrimp paste (Hae Ko).</p>
+        
+        <div class="stats-bar">
+            <div class="stat-item"><i class="fas fa-clock"></i><span>95 Mins</span></div>
+            <div class="stat-item"><i class="fas fa-signal"></i><span>Medium</span></div>
+            <div class="stat-item"><i class="fas fa-user-friends"></i><span>4 Servings</span></div>
+        </div>
+
+        <button onclick="printRecipe()" class="btn-print">
+            <i class="fas fa-print"></i> Print Recipe
+        </button>
+    </div>
+</section>
+
+<div class="recipe-container">
+    <aside class="ingredients-side">
+        <div class="ingredients-card">
+            <h3>Main Ingredients</h3>
+            <div class="ingredient-item"><input type="checkbox"><span>1kg Fresh Rice Noodles (Laksa)</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>1kg Chub Mackerel (Ikan Kembung)</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>10 pcs Dried Tamarind (Asam Gelugur)</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>Shrimp Paste (Hae Ko)</span></div>
+        </div>
+
+        <div class="ingredients-card">
+            <h3>Broth Spices & Herbs</h3>
+            <div class="ingredient-item"><input type="checkbox"><span>Torch Ginger Flower (Bunga Kantan)</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>Vietnamese Coriander (Daun Kesum)</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>Chili Paste & Shrimp Paste (Belacan)</span></div>
+        </div>
+
+        <div class="ingredients-card">
+            <h3>Garnishings</h3>
+            <div class="ingredient-item"><input type="checkbox"><span>Sliced Cucumber & Pineapple</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>Red Onion & Bird's Eye Chili</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>Fresh Mint Leaves</span></div>
+        </div>
+    </aside>
+
+    <main class="steps-side">
+        <a href="https://www.youtube.com/watch?v=8Iijx1RX4wk" target="_blank" class="video-box">
+            <div class="play-btn"><i class="fas fa-play-circle"></i></div>
+            <h4 class="video-title">Watch Recipe Tutorial</h4>
+            <p class="video-subtitle">Master the Authentic Penang Asam Laksa</p>
+        </a>
+
+        <div class="steps-container">
+            <h3>Preparation Steps</h3>
+            
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-text">
+                    <strong>Prepare the Broth:</strong> Boil the mackerel with dried tamarind. Once cooked, flake the fish meat and blend it coarsely. Save the boiling water as the base stock.
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-text">
+                    <strong>Simmer Spices:</strong> Add the blended chili paste, torch ginger flower, Vietnamese coriander, and fish meat into the stock. Let it simmer for at least 45 minutes to develop deep flavors.
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-text">
+                    <strong>The Assembly:</strong> Blanch the rice noodles and place them in a bowl. Pour the hot, tangy broth over the noodles.
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <div class="step-text">
+                    <strong>Finishing:</strong> Top with fresh cucumber, pineapple, onions, and mint. Finally, drizzle a generous spoonful of thick shrimp paste (Hae Ko) on top before serving.
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<footer>
+    <p>&copy; 2026 Serumpun Rasa. All rights reserved. | Last updated: 18 January 2026</p>
+</footer>
+
+<script src="asamlaksa.js"></script>
+
+</body>
+</html>
