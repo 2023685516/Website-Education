@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasi Dagang Terengganu | Serumpun Rasa</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="nasidagangstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+
+<header>
+    <div class="logo"><h1>Serumpun<span>Rasa</span></h1></div>
+    <a href="terengganu.html" style="text-decoration: none; color: var(--secondary-color); font-weight: 600;">
+        <i class="fas fa-chevron-left"></i> Back
+    </a>
+</header>
+
+<section class="recipe-header">
+    <img src="https://th.bing.com/th/id/R.bdb35fa5c3692f8c5e0abfcfb95ef32f?rik=eMLkr4%2fh%2bX69mQ&riu=http%3a%2f%2f1.bp.blogspot.com%2f-0kk2mOKtboE%2fTsjEhRPBLUI%2fAAAAAAAAAlA%2fSkEy42eI2WM%2fs1600%2fIMG_0029.JPG&ehk=zF3sP7WPiQPd9daPfs%2fdFrYJwdrnecDneARLl%2bDULBk%3d&risl=&pid=ImgRaw&r=0" alt="Nasi Dagang Terengganu" class="recipe-image-big">
+    <div class="recipe-meta">
+        <span style="color: var(--secondary-color); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Terengganu Heritage Recipes</span>
+        <h2>Nasi Dagang Terengganu</h2>
+        <p>A beloved Terengganu classic featuring coconut-infused rice with a lightly sticky texture, perfectly paired with a rich, spicy tuna curry and refreshing acar timun.</p>
+        
+        <div class="stats-bar">
+            <div class="stat-item"><i class="fas fa-clock"></i><span>90 Mins</span></div>
+            <div class="stat-item"><i class="fas fa-signal"></i><span>Medium</span></div>
+            <div class="stat-item"><i class="fas fa-utensils"></i><span>6-8 Pax</span></div>
+        </div>
+
+        <button id="printBtn">
+            <i class="fas fa-print"></i> Print Recipe
+        </button>
+    </div>
+</section>
+
+<div class="recipe-container">
+    <aside class="ingredients-side">
+        <div class="ingredients-card">
+            <h3>Ingredients</h3>
+            
+            <h4 style="color: var(--secondary-color); margin-bottom: 10px;">Untuk Nasi:</h4>
+            <div class="ingredient-item"><input type="checkbox"><span>4 cawan beras jati/wangi</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>1 cawan beras pulut</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>2 cawan santan pekat & 2 cawan santan cair/air</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>Halba, bawang merah & halia (dihiris)</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>Garam & gula secukup rasa</span></div>
+
+            <h4 style="color: var(--secondary-color); margin: 15px 0 10px;">Gulai Ikan (Simple Version):</h4>
+            <div class="ingredient-item"><input type="checkbox"><span>500g-800g ikan tongkol/kembung</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>3 sudu besar cili boh</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>Bawang merah, putih & halia (dikisar)</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>2 cawan santan & air asam jawa</span></div>
+
+            <h4 style="color: var(--secondary-color); margin: 15px 0 10px;">Acar Timun:</h4>
+            <div class="ingredient-item"><input type="checkbox"><span>Timun, lobak merah & bawang</span></div>
+            <div class="ingredient-item"><input type="checkbox"><span>Cuka, gula & garam</span></div>
+        </div>
+    </aside>
+
+<main class="steps-side">
+    <div style="
+        background: linear-gradient(135deg, #ffffff 0%, #fefefe 100%);
+        padding: 30px;
+        border-radius: 20px;
+        margin-bottom: 40px;
+        border: 1px solid #eee;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        position: relative;
+        overflow: hidden;
+    ">
+        <div style="position: absolute; top: 0; left: 0; width: 6px; height: 100%; background: var(--primary-color);"></div>
+
+        <div style="
+            flex-shrink: 0;
+            width: 120px;
+            height: 120px;
+            background: url('https://th.bing.com/th/id/R.bdb35fa5c3692f8c5e0abfcfb95ef32f?rik=eMLkr4%2fh%2bX69mQ&riu=http%3a%2f%2f1.bp.blogspot.com%2f-0kk2mOKtboE%2fTsjEhRPBLUI%2fAAAAAAAAAlA%2fSkEy42eI2WM%2fs1600%2fIMG_0029.JPG&ehk=zF3sP7WPiQPd9daPfs%2fdFrYJwdrnecDneARLl%2bDULBk%3d&risl=&pid=ImgRaw&r=0') center/cover;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(226, 114, 91, 0.2);
+        ">
+            <i class="fab fa-youtube" style="color: white; font-size: 40px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));"></i>
+        </div>
+
+        <div style="flex-grow: 1;">
+            <h3 style="margin-bottom: 8px; font-family: 'Playfair Display', serif; color: var(--secondary-color); font-size: 22px;">
+                Tutorial Recipe
+            </h3>
+            <p style="font-size: 14px; color: #666; margin-bottom: 15px; line-height: 1.5;">
+               Want to see the preparation method more clearly? Watch the complete step-by-step reference video directly on the official YouTube channel.
+            </p>
+            
+            <a href="https://youtu.be/53CAA1Me2Co?si=IgZcl8OS2Dt7_HzE" 
+               target="_blank" 
+               style="
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                background: #ff0000;
+                color: white;
+                padding: 10px 20px;
+                border-radius: 50px;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 14px;
+                transition: 0.3s;
+                box-shadow: 0 4px 12px rgba(255, 0, 0, 0.2);
+               "
+               onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 15px rgba(255, 0, 0, 0.3)';"
+               onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(255, 0, 0, 0.2)';"
+            >
+                <i class="fab fa-youtube"></i> Watch on Youtuve
+            </a>
+        </div>
+    </div>
+
+        <div class="steps-container">
+            <h3>Step-by-Step Instructions</h3>
+            
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-text">
+                    <strong>Prepare the Rice:</strong> Rinse the jasmine and glutinous rice until the water runs clear. Soak the rice for 4–8 hours (overnight is ideal). Drain and steam for 15–20 minutes until partially cooked.
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-text">
+                    <strong>Coconut Infusion:</strong> Mix thick and thin coconut milk with salt, sugar, sliced shallots, ginger, and fenugreek seeds. Pour this over the partially steamed rice, fold gently, and steam again for 20–30 minutes until fully cooked and fragrant.
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-text">
+                    <strong>Cook the Fish Curry:</strong> Sauté the aromatics and chili paste until oil separates. Add fish chunks, coconut milk, and tamarind juice. Simmer gently until the fish is cooked and the gravy reaches a rich thickness.
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <div class="step-text">
+                    <strong>Prepare Acar:</strong> Slice the vegetables and toss them with a mixture of vinegar, sugar, and salt. Chill for at least 30 minutes to let the flavors meld and provide a bright contrast to the rich rice.
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">5</div>
+                <div class="step-text">
+                    <strong>Serve:</strong> Scoop the coconut rice onto a plate, ladle the fish curry generously on the side, and serve with a fresh portion of acar timun and a hard-boiled egg if desired.
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<footer>
+    <p>&copy; 2026 Serumpun Rasa. All rights reserved. | Last updated: 18 January 2026</p>
+</footer>
+
+<script>
+    document.getElementById('printBtn').addEventListener('click', function() {
+        window.print();
+    });
+</script>
+
+</body>
+</html>
