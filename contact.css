@@ -1,5 +1,4 @@
-<style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
 
@@ -11,7 +10,7 @@
 
         header {
             background: #ffffff;
-            padding: 25px 5%;
+            padding: 20px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -221,5 +220,3 @@
             .contact-wrapper { grid-template-columns: 1fr; }
             .page-header h2 { font-size: 32px; }
         }
-
-    </style>
