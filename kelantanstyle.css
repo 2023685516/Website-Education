@@ -36,6 +36,15 @@ nav ul {
 nav ul li { margin-left: 25px; }
 nav ul li a { text-decoration: none; color: #555; font-weight: 600; font-size: 14px; text-transform: uppercase; transition: 0.3s; }
 nav ul li a:hover, nav ul li a.active { color: #d35400; }
+nav ul li a.active, 
+.dropdown-content a.active {
+    color: #d35400 !important;
+    font-weight: 700;
+}
+
+.dropdown-content a.active {
+    background-color: #fffaf5;
+}
 
 .dropdown { position: relative; display: inline-block; }
 .dropdown-content {
@@ -119,5 +128,6 @@ nav ul li a:hover, nav ul li a.active { color: #d35400; }
 }
 
 .contact-btn-container { margin-left: 20px; }
+
 
 footer { background: var(--secondary-color); color: white; padding: 15px 0; text-align: center; }
