@@ -44,6 +44,7 @@ nav ul li a.active,
 .dropdown-content a.active {
     background-color: #fffaf5;
 }
+
         .dropdown { position: relative; display: inline-block; }
         .dropdown-content {
             display: none;
@@ -126,6 +127,4 @@ nav ul li a.active,
 }
 
         footer { background: var(--secondary-color); color: white; padding: 20px 0; text-align: center; }
-
-
 
