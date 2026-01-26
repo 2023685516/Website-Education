@@ -14,7 +14,7 @@ body {
 
 header {
     background: #ffffff;
-    padding: 20px 5%;
+    padding: 25px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -235,5 +235,6 @@ nav ul li a:hover, nav ul li a.active {
     text-align: center;
     padding: 60px 20px;
 }
+
 
 footer { background: var(--secondary-color); color: white; padding: 15px 0; text-align: center; margin-top: 40px; }
