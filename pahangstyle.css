@@ -80,7 +80,7 @@ nav ul li a.active,
 }
 .state-banner h2 { font-family: 'Playfair Display', serif; font-size: 50px; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
 
-.search-container { padding: 30px 8%; display: flex; justify-content: center; }
+.search-container { padding: 30px 8%; display: flex; justify-content: space-between; }
 .search-box { 
     background: white; 
     padding: 10px 20px; 
@@ -108,4 +108,5 @@ nav ul li a.active,
 
 
 footer { background: var(--secondary-color); color: white; padding: 15px 0; text-align: center; }
+
 
