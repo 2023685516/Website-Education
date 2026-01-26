@@ -31,6 +31,15 @@ nav ul { list-style: none; display: flex; align-items: center; }
 nav ul li { margin-left: 25px; }
 nav ul li a { text-decoration: none; color: #555; font-weight: 600; font-size: 14px; text-transform: uppercase; transition: 0.3s; }
 nav ul li a:hover, nav ul li a.active { color: #d35400; }
+nav ul li a.active, 
+.dropdown-content a.active {
+    color: #d35400 !important;
+    font-weight: 700;
+}
+
+.dropdown-content a.active {
+    background-color: #fffaf5;
+}
 
 .dropdown { position: relative; display: inline-block; }
 .dropdown-content {
@@ -96,5 +105,6 @@ nav ul li a:hover, nav ul li a.active { color: #d35400; }
 
 .contact-btn { background-color: #d35400; color: white !important; padding: 6px 15px; border-radius: 50px; font-weight: 600; text-decoration: none; }
 .contact-btn:hover { background-color: transparent; color: #d35400 !important; border: 2px solid #d35400; }
+
 
 footer { background: var(--secondary-color); color: white; padding: 15px 0; text-align: center; }
